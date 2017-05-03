@@ -16,13 +16,14 @@
     ]
   },
   "author": "Todd Morningstar",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/stratigos/stormsreach"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stratigos/stormsreach"
   },
   "license": "GPL-3.0+",
   "devDependencies": {
     "autoprefixer": "6.3.3",
+    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-rewire": "1.0.0-beta-5",

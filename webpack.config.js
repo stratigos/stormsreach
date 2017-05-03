@@ -2,7 +2,6 @@ const webpack           = require('webpack');
 const path              = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanPlugin       = require('clean-webpack-plugin');
-const autoprefixer      = require('autoprefixer'); // CSS assist with browser-vendor specific prefixes.
 const packageConfig     = require('./package.json');
 const appEnv            = process.env.NODE_ENV || 'development';
 const appPath           = path.join(__dirname, 'app');
@@ -83,9 +82,12 @@ const config = {
       },
 
       // CSS
+      // Load styles with 'style-loader'.
+      // Post process with 'autoprefixer' (auto prefix browser vendor specific
+      //  styles).
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader"
+        loader: "style-loader!css-loader!autoprefixer-loader?browsers=last 2 versions"
       }
 
     ],
@@ -107,13 +109,7 @@ const config = {
     noInfo: true,
     inline: true,
     historyApiFallback: true
-  },
-
-  postcss: [
-    autoprefixer({
-      browsers: ['last 2 versions']
-    })
-  ]
+  }
 };
 
 if (appEnv === 'development') {
