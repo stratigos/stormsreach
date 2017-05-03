@@ -79,7 +79,7 @@ const config = {
       {
         test: /\.js$/,
         loaders: [
-          'babel?cacheDirectory&plugins=babel-plugin-rewire'
+          'babel-loader?cacheDirectory&plugins=babel-plugin-rewire'
         ],
         exclude: exclude
       },
