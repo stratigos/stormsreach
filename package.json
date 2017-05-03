@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "create": "webpack",
-    "start": "webpack-dev-server --hot --progress",
+    "start": "webpack-dev-server --progress",
     "test": "jest"
   },
   "babel": {

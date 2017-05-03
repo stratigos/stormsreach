@@ -64,9 +64,12 @@ const config = {
     })
   ],
 
-  // Enable loading modules relatively (without the ../../ prefix)
+  // Enable loading modules relatively (without the ../../ prefix). Personally,
+  //  I prefer the relative directory prefix, as it denotes loading files from
+  //  within the application vs dependencies (i.e., node_modules).
   resolve: {
-    root: appPath
+    extensions: ['.js', '.jsx', '.json', '.node'],
+    modules: [appPath, 'node_modules']
   },
 
   module: {
@@ -102,10 +105,9 @@ const config = {
   },
 
   // Settings for webpack-dev-server
-  // `--hot` and `--progress` must be set using CLI
   devServer: {
     contentBase: appPath,
-    colors: true,
+    hot: true, // Hot module loading
     noInfo: true,
     inline: true,
     historyApiFallback: true
