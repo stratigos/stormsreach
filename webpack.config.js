@@ -33,8 +33,8 @@ const config = {
     // Generate index.html with included script tags
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: 'index.html',
-      favicon: '/assets/images/favicon.ico'
+      // favicon: 'assets/images/favicon.ico',
+      template: 'index.html'
     }),
 
     // Do not output to dist if there are errors
