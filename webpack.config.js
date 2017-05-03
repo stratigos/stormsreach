@@ -38,7 +38,7 @@ const config = {
     }),
 
     // Do not output to dist if there are errors
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
 
     // Pass environment variable to frontend scripts
     new webpack.DefinePlugin({
