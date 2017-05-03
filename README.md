@@ -5,7 +5,8 @@ ReactJS with Redux example app, which powers http://stormsreach.com.
 LICENSE
 =======
 
-Neither this repository nor its website are affiliated with <a href="https://portalarium.com" alt="Portalarium Home">Portalarium, Inc</a>. <a href="https://www.shroudoftheavatar.com/" alt="SotA Website">Shroud of the Avatar</a> is a registered trademark of Portalarium, Inc. 
+Neither this repository nor its website are affiliated with <a href="https://portalarium.com" alt="Portalarium Home">Portalarium, Inc</a>.  
+<a href="https://www.shroudoftheavatar.com/" alt="SotA Website">Shroud of the Avatar</a> is a registered trademark of Portalarium, Inc. 
 
 Artwork
 -------
