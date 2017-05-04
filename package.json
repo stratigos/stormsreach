@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Website Source Code for www.stormsreach.com",
   "homepage": "http://www.stormsreach.com",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "create": "webpack",
     "start": "webpack-dev-server --progress",
