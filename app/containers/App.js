@@ -14,15 +14,15 @@ class App extends React.Component {
   render() {
     return(
       <BrowserRouter>
-        <div className="app-container">
+        <div className='app-container'>
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} placeholderProp="Hello!" />
-            <Route path="/housing" component={Housing} />
-            <Route path="/crafting" component={Crafting} />
-            <Route path="/community" component={Community} />
-            <Route path="/community" component={Community} />
-            <Route path="/about" component={About} />
+            <Route exact path='/' component={Home} placeholderProp='Hello!' />
+            <Route path='/housing' component={Housing} />
+            <Route path='/crafting' component={Crafting} />
+            <Route path='/community' component={Community} />
+            <Route path='/community' component={Community} />
+            <Route path='/about' component={About} />
             <Route render={() => {
               // Create a HoC/ContainerComponent which sends HTTP Status 404
               //  and returns a `<NotFound />` Component.

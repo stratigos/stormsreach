@@ -6,29 +6,29 @@ import { NavLink } from 'react-router-dom';
  */
 const Nav = () => {
   return (
-    <ul className="nav">
+    <ul className='nav'>
       <li>
-        <NavLink exact activeClassName="active" to="/">
+        <NavLink exact activeClassName='active' to='/'>
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName="active" to="/housing">
+        <NavLink activeClassName='active' to='/housing'>
           Housing
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName="active" to="/crafting">
+        <NavLink activeClassName='active' to='/crafting'>
           Crafting
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName="active" to="/community">
+        <NavLink activeClassName='active' to='/community'>
           Community
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName="active" to="/about">
+        <NavLink activeClassName='active' to='/about'>
           About
         </NavLink>
       </li>

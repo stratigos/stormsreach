@@ -7,7 +7,9 @@ import Nav from './Nav';
  */
 const Branding = () => {
   return(
-    <h4>SR</h4>
+    <Link className='button' to='/'>
+      <h4>SR</h4>
+    </Link>
   );
 }
 
@@ -17,11 +19,11 @@ const Branding = () => {
  */
 const Header = () => {
   return(
-    <div className="header-container">
-      <div className="branding-container">
+    <div className='header-container'>
+      <div className='branding-container'>
         <Branding />
       </div>
-      <div className="nav-container">
+      <div className='nav-container'>
         <Nav />
       </div>
     </div>
