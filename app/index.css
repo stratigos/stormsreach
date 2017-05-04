@@ -1,7 +1,23 @@
+/**
+ * Colors for when I get off my ass, and implement SASS!
+ * -----------------------------------------------------
+ * $black-md: #151515;
+ * $blue-dk: #000519;
+ * $blue-md: #000A32;
+ * $blue-md-lt: #00507D;
+ * $blue-lt: #0096C8;
+ * $grey-dk: #252525;
+ * $greensea-md: #56C5B8;
+ * $greensea-lt: #ACF5A8;
+ * $vermillion-md: #FF3322;
+ * $vermillion-lt: #FEAAA3;
+ * $white-green-md: #D3FAD3;
+ * $white-blue-md: #ADEAFE
+ * $white-md: #FAFFFF;
+ * -----------------------------------------------------
+ */
 
 body {
-  /*
-    Background color for testing, until CSS framework is fleshed out.
-  */
-  background: cyan;
+  background: #252525;
+  color: #0096C8;
 }
