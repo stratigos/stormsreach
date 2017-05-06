@@ -7,6 +7,7 @@ import Crafting from './Crafting';
 import Community from './Community';
 import About from '../components/About';
 import Donate from './Donate';
+import UserProfile from './UserProfile';
 
 /**
  * Main application Component.
@@ -25,6 +26,7 @@ class App extends React.Component {
             <Route path='/community' component={Community} />
             <Route path='/about' component={About} />
             <Route path='/donate' component={Donate} />
+            <Route path='/profile' component={UserProfile} />
             <Route render={() => {
               // Create a HoC/ContainerComponent which sends HTTP Status 404
               //  and returns a `<NotFound />` Component.
