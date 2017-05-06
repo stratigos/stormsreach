@@ -84,13 +84,13 @@ const config = {
         exclude: exclude
       },
 
-      // CSS
+      // CSS / SASS
       // Load styles with 'style-loader'.
       // Post process with 'autoprefixer' (auto prefix browser vendor specific
       //  styles).
       {
-        test: /\.css$/,
-        loader: "style-loader!css-loader!autoprefixer-loader?browsers=last 2 versions"
+        test: /\.scss$/,
+        loader: "style-loader!css-loader!sass-loader!autoprefixer-loader?browsers=last 2 versions"
       }
 
     ],

@@ -1,0 +1,31 @@
+/******************************************************************************
+* Donation Page
+*******************************************************************************/
+
+.donate-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.donate-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donate-types {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.donate-wallet-info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.donate-wallet-info > span {
+  margin: 5px;
+}

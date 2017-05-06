@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
 // Load application styles.
-import './assets/stylesheets/index.css';
+import './assets/stylesheets/index.scss';
 
 /**
  * Render component to the DOM.

@@ -1,0 +1,38 @@
+/******************************************************************************
+* Header
+*******************************************************************************/
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.branding-container {
+  flex: 1 0 0;
+}
+
+.nav-container {
+  flex: 2 0 0;
+}
+
+.user-container {
+  flex: 1 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-profile {}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li {
+  margin-right: 15px;
+  font-size: 1.2em;
+}
+
+.active {
+  font-weight: bold;
+}
