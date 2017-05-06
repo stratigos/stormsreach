@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
-require('./index.css');
+require('./assets/stylesheets/index.css');
 
 /**
  * Render component to the DOM.
