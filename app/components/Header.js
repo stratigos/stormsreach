@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import NavProfile from './NavProfile';
 
 /**
  * SFC for displaying site branding / logo within the Header.
@@ -27,7 +28,7 @@ const Header = () => {
         <Nav />
       </div>
       <div className='user-container'>
-        <span>Welcome, User!</span>
+        <NavProfile />
       </div>
     </div>
   );
