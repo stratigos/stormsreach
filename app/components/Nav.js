@@ -32,6 +32,11 @@ const Nav = () => {
           About
         </NavLink>
       </li>
+      <li>
+        <NavLink activeClassName='active' to='/donate'>
+          Support
+        </NavLink>
+      </li>
     </ul>
   );
 }
