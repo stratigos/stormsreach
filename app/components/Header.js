@@ -26,6 +26,9 @@ const Header = () => {
       <div className='nav-container'>
         <Nav />
       </div>
+      <div className='user-container'>
+        <span>Welcome, User!</span>
+      </div>
     </div>
   );
 }
