@@ -1,7 +1,9 @@
+// Load application dependencies and topmost container Components.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
-require('./assets/stylesheets/index.css');
+// Load application styles.
+import './assets/stylesheets/index.css';
 
 /**
  * Render component to the DOM.
