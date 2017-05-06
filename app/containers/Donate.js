@@ -75,7 +75,7 @@ export class Donate extends React.Component {
       <div className='donate-container'>
 
         <div className='donate-header'>
-          <h2>Support Storms Reach!</h2>
+          <h2>Support Storm's Reach!</h2>
           <p>
             Donations help fund hosting, feature development, bug fixing, and data entry for stormsreach.com.
           </p>
