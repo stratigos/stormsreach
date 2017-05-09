@@ -5,7 +5,7 @@ import React from 'react';
  */
 const About = () => {
   return(
-    <p>About this site...</p>
+    <div className='about-container'>About this site...</div>
   );
 }
 
