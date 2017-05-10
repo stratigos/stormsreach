@@ -21,11 +21,11 @@ describe('<About /> Component', () => {
     expect( shallow(<About />).defaultProps ).toBeUndefined();
   });
 
-  it('renders a containing div', () => {
-    expect( shallow(<About />).is('.about-container') ).toBe(true);
+  it('should render its containing div', () => {
+    expect( shallow(<About />).is('div.about-container') ).toBe(true);
   });
 
-  it('displays text about the site', () => {
+  it('should display text about the site', () => {
     expect( shallow(<About />).text() ).toMatch(/About this site/);
   });
 
