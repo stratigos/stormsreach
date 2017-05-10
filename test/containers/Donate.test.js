@@ -1,10 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { Link } from 'react-router-dom';
+import { render, shallow } from 'enzyme';
 
 import Donate from '../../app/containers/Donate';
 
 describe('<Donate /> Component', () => {
+
+  it('should render a page of static content', () => {
+    expect( render(<Donate />) ).toMatchSnapshot();
+  });
 
   it('should render the PayPal Component', () => {
     const testDonate = shallow(<Donate />);
