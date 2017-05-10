@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-// import { Link } from 'react-router-dom'; // TODO NEED THIS?
 
 import HomepageLink from '../../app/components/HomepageLink';
 
