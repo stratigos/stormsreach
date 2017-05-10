@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import NavProfile from '../../app/components/NavProfile';
 
-describe('<Nav /> Component', () => {
+describe('<NavProfile /> Component', () => {
 
   describe('as a stateless functional component', () => {
 
