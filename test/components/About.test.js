@@ -5,6 +5,7 @@ import About from '../../app/components/About';
 
 describe('<About /> Component', () => {
 
+  // Still deciding on if and how to test this.
   describe('as a stateless functional component', () => {
 
     it('should be a function', () => {
