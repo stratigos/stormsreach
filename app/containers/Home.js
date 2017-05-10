@@ -24,10 +24,11 @@ export class Home extends React.Component {
           </h1>
         </div>
         <div className="homepage-image">
+          {/* Image credit: https://www.sotamap.com/ */}
           <img
             src={'http://res.cloudinary.com/stormsreach/image/upload/c_scale,e_saturation:100,w_465/v1494083455/stormsreach_sotamap_z5_u5xhji.png'}
             alt={'Storm\'s Reach on sotamap.com'}
-            title={'Storm\'s Reach'}
+            title={'Storm\'s Reach on SotAMap'}
           />
         </div>
         <div className='homepage-content'>
