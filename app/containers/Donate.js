@@ -10,32 +10,33 @@ const PayPalButton = () => {
       <input type={'hidden'} name={'cmd'} value={'_s-xclick'} />
       <input type={'hidden'} name={'hosted_button_id'} value={'XZGMVB3PVU5YU'} />
       <table>
-        <tr>
-          <td>
-            <input type={'hidden'} name={'on0'} value={'Donation Suggestions'} />
-            Donation Suggestions
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <select name={'os0'}>
-    	        <option value={'You Rock!'}>You Rock! $25.00 USD</option>
-    	        <option value={'Large'}>Large $10.00 USD</option>
-    	        <option value={'Medium'}>Medium $5.00 USD</option>
-    	        <option value={'Small'}>Small $1.00 USD</option>
-            </select>
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>
+              <input type={'hidden'} name={'on0'} value={'Donation Suggestions'} />
+              Donation Suggestions
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select name={'os0'}>
+      	        <option value={'You Rock!'}>You Rock! $25.00 USD</option>
+      	        <option value={'Large'}>Large $10.00 USD</option>
+      	        <option value={'Medium'}>Medium $5.00 USD</option>
+      	        <option value={'Small'}>Small $1.00 USD</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
       </table>
       <input type={'hidden'} name={'currency_code'} value={'USD'} />
       <input
         type={'image'}
         src={'https://www.paypalobjects.com/en_US/i/btn/btn_paynow_LG.gif'}
-        border={'0'}
         name={'submit'}
         alt={'PayPal - The safer, easier way to pay online!'}
       />
-      <img alt={''} border={'0'} src={'https://www.paypalobjects.com/en_US/i/scr/pixel.gif'} width={'1'} height={'1'} />
+      <img alt={''} src={'https://www.paypalobjects.com/en_US/i/scr/pixel.gif'} width={'1'} height={'1'} />
     </form>
   );
 };
