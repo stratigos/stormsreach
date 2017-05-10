@@ -30,8 +30,6 @@ describe('<HomepageLink /> Component', () => {
     const testHomepageLink = shallow(<HomepageLink />);
     const childLink        = testHomepageLink.find('Link');
 
-
-
     expect( childLink.length ).toEqual(1);
     expect( childLink.props().to ).toEqual('/');
   });
