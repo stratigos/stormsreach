@@ -93,9 +93,9 @@ export class Donate extends React.Component {
 
           <div className='donate-type-paypal'>
             <h3>Paypal</h3>
-            <p>
+            <div>
               <PayPalButton />
-            </p>
+            </div>
           </div>
 
         </div>
