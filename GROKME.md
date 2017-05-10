@@ -24,15 +24,14 @@ along with a sophisticated CSS framework as good as any. For now I am using
 CSS Flexbox to keep layouts simple, and plan to iterate on the UI once the  
 site functionality is closer to completion. While keeping up with JavaScript  
 libraries is hard, I am currently considering the following libraries:
-
- * [Elemental UI](http://elemental-ui.com/)
- * [Material UI](http://www.material-ui.com/#/)
- * [Grommet](https://grommet.github.io/docs/)
+  * [Elemental UI](http://elemental-ui.com/)
+  * [Material UI](http://www.material-ui.com/#/)
+  * [Grommet](https://grommet.github.io/docs/)
 
 Tests
 -----
 * :computer: `npm run test`
- * This is my first major foray into testing a React and Redux application.  
+  * This is my first major foray into testing a React and Redux application.  
  While I have extensive experience with testing frameworks like RSpec,  
  Minitest, or PHPUnit, I am exercising a chance to gain new experience  
  with testing JavaScript applications.  
@@ -49,8 +48,8 @@ Coming Soon
 -----------
 
 * :neckbeard: Back end content management application tentatively written with  
-the [Phoenix](http://www.phoenixframework.org/) [Elixir](http://elixir-lang.org/) framework.  
- * After working for a decade with the Object Oriented paradigm, I am  curious as  
+the [Phoenix](http://www.phoenixframework.org/) framework, in [Elixir](http://elixir-lang.org/).  
+  * After working for a decade with the Object Oriented paradigm, I am  curious as  
 to how well the Functional Programming paradigm with Elixir harmonizes  with  
 the functional nature of JavaScript.
 
