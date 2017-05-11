@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { DEFAULT_CRAFTER } from '../constants/defaults';
 
 /**
@@ -100,7 +101,9 @@ export class Crafter extends React.Component {
 
         <div className='crafter-attributes'>
           <div>
-            Name: <strong>{this.state.name}</strong>
+            Name: <Link className='crafter-link' to='/avatars/1'>
+              <strong>{this.state.name}</strong>
+            </Link>
           </div>
           <div>
             <AvatarTown home={this.state.home} homeLink={this.state.homeMapLink} />
@@ -114,13 +117,15 @@ export class Crafter extends React.Component {
           </div>
         </div>
 
-        <div className='crafter-image'>
-          <AvatarCrafterImage
-            imgSrc={this.state.profileImage}
-            imgAlt={this.state.name + ' Crafter Image'}
-            imgTitle={this.state.name}
-          />
-        </div>
+        <Link className='crafter-link' to='/avatars/1'>
+          <div className='crafter-image'>
+            <AvatarCrafterImage
+              imgSrc={this.state.profileImage}
+              imgAlt={this.state.name + ' Crafter Image'}
+              imgTitle={this.state.name}
+            />
+          </div>
+        </Link>
 
       </div>
     );
