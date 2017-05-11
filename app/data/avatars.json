@@ -15,14 +15,14 @@
       "town": "Storm's Reach",
       "shop": "",
       "abilities": ["Tailoring", "Blacksmith", "Carpentry", "Cooking", "Alchemy"]
+    },
+    "3": {
+      "id": "3",
+      "name": "Woody Craftinjack",
+      "image": "",
+      "town": "Storm's Reach",
+      "shop": "The Double Deuce Tavern",
+      "abilities": ["Alchemy"]
     }
-  },
-  "3": {
-    "id": "3",
-    "name": "Woody Craftinjack",
-    "image": "",
-    "town": "Storm's Reach",
-    "shop": "The Double Deuce Tavern",
-    "abilities": ["Alchemy"]
   }
 }
