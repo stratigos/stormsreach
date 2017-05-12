@@ -11,7 +11,6 @@ import Donate from './Donate';
 import UserProfile from './UserProfile';
 import AvatarContainer from './AvatarContainer';
 
-
 /**
  * Main application Component.
  */
@@ -31,7 +30,7 @@ class App extends React.Component {
             <Route path='/donate' component={Donate} />
             <Route path='/profile' component={UserProfile} />
             <Route path='/avatars/:avatarId' component={AvatarContainer} />
-            <Route path="*" status={404} component={NotFound} />
+            <Route path='*' status={404} component={NotFound} />
           </Switch>
         </div>
       </BrowserRouter>
