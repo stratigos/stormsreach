@@ -1,0 +1,32 @@
+/******************************************************************************
+* Not Found / 404 Page
+*******************************************************************************/
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.not-found-container h3 {
+  color: $vermillion-md;
+}
+
+.not-found-well {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  padding: 100px 200px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px black, 0 0 10px black;
+  background: rgba(0, 0, 0, 0.2);
+  background-color: $grey-dk;
+}
+
+.not-found-homepage-link {
+  margin: 50 auto;
+}

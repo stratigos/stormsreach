@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
+import NotFound from '../components/NotFound';
 import Home from './Home';
 import Housing from './Housing';
 import Crafting from './Crafting';
@@ -9,6 +10,7 @@ import About from '../components/About';
 import Donate from './Donate';
 import UserProfile from './UserProfile';
 import AvatarContainer from './AvatarContainer';
+
 
 /**
  * Main application Component.
@@ -29,13 +31,7 @@ class App extends React.Component {
             <Route path='/donate' component={Donate} />
             <Route path='/profile' component={UserProfile} />
             <Route path='/avatars/:avatarId' component={AvatarContainer} />
-            <Route render={() => {
-              // Create a HoC/ContainerComponent which sends HTTP Status 404
-              //  and returns a `<NotFound />` Component.
-              return (
-                <p>Page Not Found!</p>
-              );
-            }} />
+            <Route path="*" status={404} component={NotFound} />
           </Switch>
         </div>
       </BrowserRouter>
