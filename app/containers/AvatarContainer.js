@@ -9,7 +9,7 @@ import Avatar from '../components/Avatar';
  *  prevents initial `PropTypes` required error on initial load.
  */
 const getCurrentAvatar = (avatars, avatarId) => {
-  return avatars[avatarId] || undefined;
+  return avatars[(avatarId - 1)] || undefined;
 };
 
 /**
