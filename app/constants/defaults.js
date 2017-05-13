@@ -17,3 +17,9 @@ export const DEFAULT_CRAFTER = {
     'Carpentry'
   ]
 };
+
+/**
+ * API host to application "back end".
+ *  - Using local JSON file data store for now, back end TBD.
+ */
+export const BASE_URL = '../data/';

@@ -1,57 +1,77 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
- * Component for displaying a member of the site.
+ * Stateless Functional Component for displaying a member of the site, i.e.,
+ *  an "Avatar" from SotA.
  */
-export class Avatar extends React.Component {
+const Avatar = (props) => {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: props.name,
-      image: props.image,
-      home: props.home,
-      shop: props.shop,
-      abilities: props.abilities
-    };
-  }
-
-  render() {
-    let imageAttr    = `${this.state.name} Image`;
-    let abilityItems = '';
-    if(this.state.abilities.length > 0) {
-      abilityItems = this.state.abilities.map((ability, idx) =>
+  // TODO handle this in respective stateless functional components.
+  let imageAttr, abilityItems = '';
+  if (props.avatar) {
+    imageAttr = `${props.avatar.name} Image`;
+    if (props.avatar.abilities.length > 0) {
+      abilityItems = props.avatar.abilities.map((ability, idx) =>
         <li key={idx} className='avatar-ability'><strong>{ability}</strong></li>
       );
     }
-
-    return(
-      <div className='avatar'>
-        <div className='avatar-info'>
-          <ul className='avatar-info-list'>
-            <li>Name: <strong>{this.state.name}</strong></li>
-            <li>Home Town: <strong>{this.state.home}</strong></li>
-            <li>Shop: <strong>{this.state.shop}</strong></li>
-            <li>
-              <span>Services:</span>
-              <ul className='avatar-services-list'>
-                {abilityItems}
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div className='avatar-image'>
-          <img
-            src={this.state.image}
-            alt={imageAttr}
-            title={imageAttr}
-          />
-        </div>
-      </div>
-    );
   }
 
+  // TODO: Create stateless functional components out of the following JSX.
+  return(
+      <div className='avatar'>
+        {!props.avatar || !props.avatar.id
+          ? <div className='avatar-loading'><h3>Loading...</h3></div>
+          :  <div>
+              <div className='avatar-info'>
+                <ul className='avatar-info-list'>
+                  <li>Name: <strong>{props.avatar.name}</strong></li>
+                  <li>Home Town: <strong>{props.avatar.town}</strong></li>
+                  <li>Shop: <strong>{props.avatar.shop}</strong></li>
+                  <li>
+                    <span>Services:</span>
+                    <ul className='avatar-services-list'>
+                      {abilityItems}
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div className='avatar-image'>
+                <img
+                  src={props.avatar.image}
+                  alt={imageAttr}
+                  title={imageAttr}
+                />
+              </div>
+            </div>
+        }
+      </div>
+  );
+
+}
+
+Avatar.defaultProps = {
+  avatar: {
+    id: 0,
+    name: 'Loading',
+    image: undefined,
+    town: "Storm's Reach",
+    shop: undefined,
+    abilities: []
+  }
+};
+
+Avatar.propTypes = {
+  avatarId: PropTypes.number.isRequired,
+  avatar: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    town: PropTypes.string.isRequired,
+    shop: PropTypes.string,
+    abilities: PropTypes.arrayOf(PropTypes.string)
+  }).isRequired
 }
 
 export default Avatar;
