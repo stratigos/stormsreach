@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // Application Containers and Components.
 import About from '../components/About';
 import AvatarPage from '../components/AvatarPage';
+import CraftingPage from '../components/CraftingPage';
 import Header from '../components/Header';
 import NotFound from '../components/NotFound';
 
@@ -11,7 +12,6 @@ import NotFound from '../components/NotFound';
 //  a Redux app.
 import Home from './Home';
 import Housing from './Housing';
-import Crafting from './Crafting';
 import Community from './Community';
 import Donate from './Donate';
 import UserProfile from './UserProfile';
@@ -30,8 +30,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} placeholderProp='Hello!' />
           <Route path='/housing' component={Housing} />
-          <Route path='/crafting' component={Crafting} />
-          <Route path='/community' component={Community} />
+          <Route path='/crafting' component={CraftingPage} />
           <Route path='/community' component={Community} />
           <Route path='/about' component={About} />
           <Route path='/donate' component={Donate} />

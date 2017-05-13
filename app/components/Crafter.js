@@ -10,11 +10,11 @@ const CraftingServices = (props) => {
   let abilityItems = '';
   if(props.abilities.length > 0) {
     abilityItems = props.abilities.map((ability, idx) =>
-      <li key={idx} className='crafting-ability'><strong>{ability}</strong></li>
+      <li key={idx} className='crafter-ability'><strong>{ability}</strong></li>
     );
   }
 
-  return(<ul>{abilityItems}</ul>);
+  return(<ul className='crafter-abilities'>{abilityItems}</ul>);
 };
 
 CraftingServices.propTypes = {
@@ -25,10 +25,9 @@ CraftingServices.propTypes = {
  * SFC to optionally display Avatar's shop.
  */
 const AvatarShop = (props) => {
-  // Display the Avatar's shop, if one is provided.
   let shop = '';
   if(props.shop) {
-    shop = ['Shop: ', <strong>{props.shop}</strong>];
+    shop = <strong>{props.shop}</strong>;
   }
 
   return(<span>{shop}</span>);
@@ -39,21 +38,18 @@ AvatarShop.propTypes = {
 };
 
 /**
- * SFC to optionally display Avatar's hometown as a link to sotamap.com, or
- *  just the name of the town.
+ * SFC to optionally display Avatar's hometown.
  */
 const AvatarTown = (props) => {
-  let homeVal = ['Home: ', <strong>{props.home}</strong>];
-  if(props.homeLink) {
-    homeVal = ['Home: ', <a href={props.homeLink} target={'_blank'}><strong>x{props.home}</strong></a>];
+  let town = '';
+  if(props.town) {
+    town = <strong>{props.town}</strong>;
   }
-
-  return(<span>{homeVal}</span>);
+  return(<span>{town}</span>);
 };
 
 AvatarTown.propTypes = {
-  home: PropTypes.string,
-  homeLink: PropTypes.string
+  town: PropTypes.string
 };
 
 /**
@@ -66,7 +62,7 @@ const AvatarCrafterImage = (props) => {
       alt={props.imgAlt}
       title={props.imgTitle}
     />
-  )
+  );
 };
 
 AvatarCrafterImage.propTypes = {
@@ -76,79 +72,94 @@ AvatarCrafterImage.propTypes = {
 };
 
 /**
+ * Link to the Avatar's page.
+ */
+const AvatarCrafterNameLink = (props) => {
+  let nameWithLink = <strong>{props.name}</strong>;
+
+  if(props.id) {
+    nameWithLink = <Link className='crafter-link' to={`/avatars/${props.id}`}>{nameWithLink}</Link>;
+  }
+
+  return(nameWithLink);
+};
+
+AvatarCrafterNameLink.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string.isRequired
+};
+
+/**
+ * Wrap the crafter image with a link to the Avatar page.
+ */
+const AvatarCrafterImageLink = (props) => {
+  let crafterImage = <div className='crafter-image'>
+    <AvatarCrafterImage
+      imgSrc={props.image}
+      imgAlt={`${props.name} Crafter Image`}
+      imgTitle={props.name}
+    />
+  </div>;
+
+  if(props.id) {
+    crafterImage = <Link className='crafter-link' to={`/avatars/${props.id}`}>{crafterImage}</Link>
+  }
+
+  return(crafterImage);
+};
+
+AvatarCrafterImageLink.propTypes = {
+  id: PropTypes.number,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+};
+
+/**
  * Component for a Crafter on the "Crafting" page. Represents an Avatar
  *  that lives in the Storm's Reach area and offers crafting services.
  */
-export class Crafter extends React.Component {
+const Crafter = (props) => {
+  return(
+    <div className='crafter'>
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: props.name,
-      profileImage: props.profileImage,
-      home: props.home,
-      homeMapLink: props.homeMapLink,
-      shop: props.shop,
-      craftingAbilities: props.craftingAbilities
-    };
-  }
-
-  render() {
-
-    return(
-      <div className='crafter'>
-
-        <div className='crafter-attributes'>
-          <div>
-            Name: <Link className='crafter-link' to='/avatars/1'>
-              <strong>{this.state.name}</strong>
-            </Link>
-          </div>
-          <div>
-            <AvatarTown home={this.state.home} homeLink={this.state.homeMapLink} />
-          </div>
-          <div>
-            <AvatarShop shop={this.state.shop} />
-          </div>
-          <div className='crafting-abilities'>
-            Services:
-            <CraftingServices abilities={this.state.craftingAbilities} />
-          </div>
+      <div className='crafter-attributes'>
+        <div>
+          Name: <AvatarCrafterNameLink id={props.id} name={props.name} />
         </div>
-
-        <Link className='crafter-link' to='/avatars/1'>
-          <div className='crafter-image'>
-            <AvatarCrafterImage
-              imgSrc={this.state.profileImage}
-              imgAlt={this.state.name + ' Crafter Image'}
-              imgTitle={this.state.name}
-            />
-          </div>
-        </Link>
-
+        <div>
+          Town: <AvatarTown town={props.town} />
+        </div>
+        <div>
+          Shop: <AvatarShop shop={props.shop} />
+        </div>
+        <div className='crafting-abilities'>
+          Services:
+          <CraftingServices abilities={props.abilities} />
+        </div>
       </div>
-    );
-  }
 
+      <AvatarCrafterImageLink id={props.id} name={props.name} image={props.image} />
+
+    </div>
+  );
 };
 
-Crafter.propTypes= {
-  name: PropTypes.string.isRequired,
-  profileImage: PropTypes.string,
-  home: PropTypes.string.isRequired,
-  homeMapLink: PropTypes.string,
-  shop: PropTypes.string,
-  craftingAbilities: PropTypes.arrayOf(PropTypes.string).isRequired
+Crafter.defaultProps = {
+  id: undefined,
+  name: DEFAULT_CRAFTER.name,
+  image: DEFAULT_CRAFTER.image,
+  town: DEFAULT_CRAFTER.town,
+  shop: undefined,
+  abilities: DEFAULT_CRAFTER.abilities
 }
 
-Crafter.defaultProps = {
-  name: DEFAULT_CRAFTER.NAME,
-  profileImage: DEFAULT_CRAFTER.PROFILE_IMAGE_SRC,
-  home: DEFAULT_CRAFTER.HOME,
-  homeMapLink: null,
-  shop: null,
-  craftingAbilities: DEFAULT_CRAFTER.ABILITIES
+Crafter.propTypes= {
+  id: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  town: PropTypes.string,
+  shop: PropTypes.string,
+  abilities: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default Crafter;
