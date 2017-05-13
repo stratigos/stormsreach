@@ -6,15 +6,20 @@
 
 ReactJS
 -------
-* :sparkle: v 15.5
-* TBD...
+ * :sparkle: v 15.5
+ * Modularized and composable.
+   * For presentation, I favor [stateless functional components](https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/), such as **[Crafter](app/components/Crafter.js)** or **[Avatar](app/components/Avatar.js)**.
+   * I like to encapsulate UI state management and flow with [Higher-Order Containers](https://facebook.github.io/react/docs/higher-order-components.html) or Components, like **[CraftersContainer](app/containers/CraftersContainer.js)** or **[AvatarContainer](app/containers/AvatarContainer.js)**.
+   * I would consider most other responsibilities outside of React's domain.
 
 Redux
 -----
-* :truck: v 3.6
-* Currently reads from static data until corresponding back end developed.  
+ * :truck: v 3.6
+ * [Flux Standard Action](https://github.com/acdlite/flux-standard-action) pattern is enforced through [ActionCreators](http://redux.js.org/docs/basics/Actions.html#action-creators), like **[fetchAvatars](app/actions/fetch_avatars.js)**.
+ * Data is not mutated, but diff'd and dispatched with Reducers like **[avatarsReducer](app/reducers/avatars_reducer.js)**.
+ * I handle integrating with external data sources through an **[apiMiddleware](app/middlewares/api_middleware.js)**.
+   * Currently, API requests respond from static files until corresponding back end developed.  
 See [Coming Soon](#coming-soon) below.
-* TBD...
 
 CSS Flexbox
 -----------
@@ -33,16 +38,16 @@ Tests
 * :computer: `npm run test`
   * This is my first major foray into testing a React and Redux application.  
  While I have extensive experience with testing frameworks like RSpec,  
- Minitest, or PHPUnit, I am exercising a chance to gain new experience  
+ Minitest, Mocha, or PHPUnit, I am exercising a chance to gain new experience  
  with testing JavaScript applications.  
 * Facebook's [Jest](https://github.com/facebook/jest)
 * Air BnB's [enzyme](https://github.com/airbnb/enzyme)
-* TBD...
+* *TBD...*
 
 Heroku
 ------
 * :shipit: Free dyno, may take 10-30s to wake from sleep.
-* TBD
+* *TBD...*
 
 Coming Soon
 -----------
