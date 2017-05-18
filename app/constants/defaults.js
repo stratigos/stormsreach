@@ -17,3 +17,10 @@ export const DEFAULT_CRAFTER = {
  *  - Using local JSON file data store for now, back end TBD.
  */
 export const BASE_URL = '../data/';
+
+
+/**
+ * Commonly toggled CSS classes belonging to CSS frameworks or application
+ *  styles.
+ */
+export const CSS_HIDDEN = 'hidden';

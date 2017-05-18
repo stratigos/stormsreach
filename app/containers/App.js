@@ -6,6 +6,7 @@ import About from '../components/About';
 import AvatarPage from '../components/AvatarPage';
 import CraftingPage from '../components/CraftingPage';
 import Header from '../components/Header';
+import LoadingNotifier from '../components/LoadingNotifier';
 import NotFound from '../components/NotFound';
 
 // Note: these arent "real" containers, just placeholders for conversion to
@@ -27,6 +28,7 @@ const App = () => {
     <BrowserRouter>
       <div className='app-container'>
         <Header />
+        <LoadingNotifier />
         <Switch>
           <Route exact path='/' component={Home} placeholderProp='Hello!' />
           <Route path='/housing' component={Housing} />
