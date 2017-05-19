@@ -1,5 +1,5 @@
 # stormsreach
-ReactJS with Redux example app, which powers http://stormsreach.com.  
+React with Redux JavaScript app, which powers http://stormsreach.com.  
 For technical specifications, please see the **[GROKME](GROKME.md)** file.
 
 ----

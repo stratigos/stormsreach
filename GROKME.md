@@ -44,10 +44,17 @@ Tests
 * Air BnB's [enzyme](https://github.com/airbnb/enzyme)
 * *TBD...*
 
+Performance Optimizations
+-------------------------
+ * :running: DNS Prefetching
+   * Used for external partners and dependencies, like my Image CDN.
+ * :speedboat: HTTP header `Transfer-Encoding: chunked`
+   * Mitigates potential TCP Slow Start issues in spotty or unstable networks.
+
 Heroku
 ------
 * :shipit: Free dyno, may take 10-30s to wake from sleep.
-* *TBD...*
+* Simple NodeJS and Express [server application](server.js) sends all requests to React Router.
 
 Coming Soon
 -----------
