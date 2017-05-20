@@ -5,14 +5,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import About from '../components/About';
 import AvatarPage from '../components/AvatarPage';
 import CraftingPage from '../components/CraftingPage';
+import RentalsPage from '../components/RentalsPage';
 import Header from '../components/Header';
 import LoadingNotifier from '../components/LoadingNotifier';
 import NotFound from '../components/NotFound';
 
 // Note: these arent "real" containers, just placeholders for conversion to
-//  a Redux app.
+//  a Redux app, awaiting implementation.
 import Home from './Home';
-import Housing from './Housing';
 import Community from './Community';
 import Donate from './Donate';
 import UserProfile from './UserProfile';
@@ -31,7 +31,7 @@ const App = () => {
         <LoadingNotifier />
         <Switch>
           <Route exact path='/' component={Home} placeholderProp='Hello!' />
-          <Route path='/housing' component={Housing} />
+          <Route path='/housing' component={RentalsPage} />
           <Route path='/crafting' component={CraftingPage} />
           <Route path='/community' component={Community} />
           <Route path='/about' component={About} />
