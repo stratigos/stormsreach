@@ -8,7 +8,7 @@ const avatarsReducer = (avatars = [], action) => {
     case ADD_AVATAR:
       return avatars.concat( action.payload.avatar );
     case SET_AVATARS:
-      return action.payload.avatars;
+      return action.payload.response.avatars;
     // TODO: ENHANCE REDUCER WITH `avatarReducer(avatar, action)` TO CALL HERE?
     // case SET_AVATAR:
     //   return action.payload.avatar;

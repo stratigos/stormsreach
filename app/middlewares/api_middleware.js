@@ -31,23 +31,18 @@ const apiMiddleware = ({ dispatch }) => next => action => {
 
   // Fetch the response from the API server, and check for the next Action name
   //  (or ID) in the `Action.payload.success` property.
-  // Dispatch `apiDone()` when finished.
+  // Dispatch `apiDone()` when finished, and dispatch an error Action creator
+  //  if any errors or bad HTTP status codes were encountered.
   fetch(BASE_URL + payload.url)
     .then(response => {
-      // Check for any non successful HTTP status codes.
       if (response.status >= 300) {
         dispatch(apiDone());
         dispatch(apiError(response.status));
       } else {
-        // TODO: Remove `avatars` specific logic, and handle response in the
-        //  next Action (after its been JSONified here). The next Action may
-        //  need to call a subsequent ActionCreator (e.g., handle the response
-        //  having returned an empty data set after a successful call).
         response.json()
-          .then(response => response.avatars)
-          .then(avatars  => {
+          .then(response  => {
             dispatch(apiDone());
-            dispatch({ type: payload.success, payload: { avatars } });
+            dispatch({ type: payload.success, payload: { response } });
           })
       }
     })
