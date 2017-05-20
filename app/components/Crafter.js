@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import AvatarLink from './AvatarLink';
 import { DEFAULT_CRAFTER } from '../constants/defaults';
 
 /**
@@ -72,24 +72,6 @@ AvatarCrafterImage.propTypes = {
 };
 
 /**
- * Link to the Avatar's page.
- */
-const AvatarCrafterNameLink = (props) => {
-  let nameWithLink = <strong>{props.name}</strong>;
-
-  if(props.id) {
-    nameWithLink = <Link className='crafter-link' to={`/avatars/${props.id}`}>{nameWithLink}</Link>;
-  }
-
-  return(nameWithLink);
-};
-
-AvatarCrafterNameLink.propTypes = {
-  id: PropTypes.number,
-  name: PropTypes.string.isRequired
-};
-
-/**
  * Wrap the crafter image with a link to the Avatar page.
  */
 const AvatarCrafterImageLink = (props) => {
@@ -102,7 +84,7 @@ const AvatarCrafterImageLink = (props) => {
   </div>;
 
   if(props.id) {
-    crafterImage = <Link className='crafter-link' to={`/avatars/${props.id}`}>{crafterImage}</Link>
+    crafterImage = <AvatarLink id={props.id} name={props.name}>{crafterImage}</AvatarLink>
   }
 
   return(crafterImage);
@@ -124,7 +106,7 @@ const Crafter = (props) => {
 
       <div className='crafter-attributes'>
         <div>
-          Name: <AvatarCrafterNameLink id={props.id} name={props.name} />
+          Name: <AvatarLink id={props.id} name={props.name} />
         </div>
         <div>
           Town: <AvatarTown town={props.town} />
