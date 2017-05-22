@@ -12,7 +12,7 @@ const AboutPage = () => {
 
       <div className='about-header'>
         <h2>About this Application</h2>
-        <p className='subheader'>The coziest corner in Novia.</p>
+        <p className='subheader'>Bringing together the coziest corner in Novia.</p>
       </div>
 
       <div className='about-body'>
@@ -22,7 +22,7 @@ const AboutPage = () => {
             This application exists to facilitate the members of the wider area around Storm's Reach with the means to
             find Avatars in the local marketplace. This site is not meant to facilitate communication between Avatars,
             which is encouraged in-game. If you're asking, "what game?!" then head on over to the <a
-              href='https://www.shroudoftheavatar.com/'>Shroud of the Avatar website</a> and dive in.
+              href='https://www.shroudoftheavatar.com/' target='_blank'>Shroud of the Avatar website</a> and dive in.
           </p>
           <p>
             This application is heavily under construction. If youre eager to see new features released, then by all
@@ -47,6 +47,21 @@ const AboutPage = () => {
             To get involved, contact <AvatarLink id={1} /> on the SotA forums, SotA Discord channel, or in-game! All
             Avatars joining the site must be members of the wider area around Storm's Reach, including Aerie, Elysium,
             Etceter, and South Paladis.
+          </p>
+          <h3>Disclaimer</h3>
+          <p>
+            This site is not affiliated with Portalarium, Inc., and has no official association with Shroud of the
+            Avatar. It is made by fans, for fans, and is generally meant to enhance the experience of the online game.
+            Players discovering a way to grief others through this site will be pwned and mocked severely. Aggro
+            behavior will generally not be tolerated. Defacing or otherwise trash talking Portalarium, any of its IP or
+            employees, or basically having any kinda bad attitude regarding SotA will also not be tolerated. Have fun
+            and be nice and celebrate positive aspects of SotA so I dont have to have any kind of legal guacamole on
+            here, protecting me from Port protecting themselves from you. You should also just <a
+              href='https://www.shroudoftheavatar.com/?page_id=60538' target='_blank'>back the project</a> to support
+            the success of Shroud of the Avatar!
+          </p>
+          <p>
+            Thank you, and I hope to see you in the Storm Shadow Tavern, downtown Storm's Reach!
           </p>
         </div>
 
