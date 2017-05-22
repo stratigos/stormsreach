@@ -1,0 +1,15 @@
+{
+  "vendors": [
+    {
+      "id": 1,
+      "avatar_id": 1,
+      "shop_id": 1,
+      "name": "Slapping Bird",
+      "town": "Storm's Reach",
+      "location": "",
+      "image": "",
+      "description": "A colorful buccaneer turned scholar and chef, Slapping Bird runs the market in front of the Storm Shadow Tavern, in Storm's Reach. You can pause to hear a lively tale, or browse his wares from all over Novia. Try some of the delectable foods and drinks, and return again for another story.",
+      "published_at": "2017-05-22"
+    }
+  ]
+}
