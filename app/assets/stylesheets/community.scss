@@ -1,19 +1,21 @@
 /******************************************************************************
-* Home Page
+* Community component styles.
 *******************************************************************************/
 
-.homepage-container {
+.community-header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2 {
+    margin: 5px;
+  }
+
 }
 
-.homepage-header > h1 {
+.community-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.homepage-content {
-  max-width: 800px;
+  margin-top: 40px;
 }

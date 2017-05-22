@@ -1,19 +1,31 @@
 /******************************************************************************
-* Home Page
+* About page styles.
 *******************************************************************************/
 
-.homepage-container {
+.about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.homepage-header > h1 {
+.about-header {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2 {
+    margin: 5px;
+  }
+
 }
 
-.homepage-content {
+.about-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about-text {
   max-width: 800px;
 }

@@ -69,9 +69,12 @@ a:visited {
 /**
  * Imports.
  */
-
+@import 'typography';
 @import 'components';
 @import 'header';
+
+@import 'about';
+@import 'community';
 @import 'crafting';
 @import 'donation';
 @import 'homepage';
