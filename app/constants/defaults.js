@@ -13,6 +13,11 @@ export const DEFAULT_CRAFTER = {
 };
 
 /**
+ * Text to display for an AvatarLink if name is blank.
+ */
+export const DEFAULT_AVATAR_LINK_TEXT = 'Avatar Page';
+
+/**
  * API host to application "back end".
  *  - Using local JSON file data store for now, back end TBD.
  */

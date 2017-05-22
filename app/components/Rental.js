@@ -9,7 +9,7 @@ const Rental = (props) => {
         <span className='list-label'>ID:</span> {props.id}
       </div>
       <div>
-        <span className='list-label'>Host:</span> <AvatarLink id={props.id} name={props.avatar_name} />
+        <span className='list-label'>Host:</span> <AvatarLink id={props.avatar_id} />
       </div>
       <div>
         <span className='list-label'>Town:</span> {props.town}
@@ -40,7 +40,6 @@ const Rental = (props) => {
 Rental.propTypes= {
   id: PropTypes.number.isRequired,
   avatar_id: PropTypes.number.isRequired,
-  avatar_name: PropTypes.string.isRequired,
   town: PropTypes.string.isRequired,
   location: PropTypes.string,
   description: PropTypes.string,

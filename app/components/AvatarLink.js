@@ -6,6 +6,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { DEFAULT_AVATAR_LINK_TEXT } from '../constants/defaults';
 
 const AvatarLink = (props) => {
 
@@ -22,7 +24,22 @@ const AvatarLink = (props) => {
 
 AvatarLink.propTypes = {
   id: PropTypes.number,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string
 };
 
-export default AvatarLink;
+/**
+ * Derive the Avatar's name, used as the child text for the Link, from the
+ *  current Avatar ID. This allows calling components to require less state
+ *  (i.e., the Avatar name isn't needed, just the ID).
+ */
+const getAvatarNameFromId = (avatars, avatar_id) => {
+  return (avatars[(avatar_id - 1)] !== undefined)
+    ? avatars[(avatar_id - 1)].name
+    : DEFAULT_AVATAR_LINK_TEXT;
+};
+
+const mapStateToProps = (state, ownProps) => ({
+  name: getAvatarNameFromId(state.avatars, ownProps.id)
+});
+
+export default connect(mapStateToProps)(AvatarLink);

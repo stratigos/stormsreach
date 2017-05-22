@@ -84,7 +84,7 @@ const AvatarCrafterImageLink = (props) => {
   </div>;
 
   if(props.id) {
-    crafterImage = <AvatarLink id={props.id} name={props.name}>{crafterImage}</AvatarLink>
+    crafterImage = <AvatarLink id={props.id}>{crafterImage}</AvatarLink>
   }
 
   return(crafterImage);
@@ -106,7 +106,7 @@ const Crafter = (props) => {
 
       <div className='crafter-attributes'>
         <div>
-          Name: <AvatarLink id={props.id} name={props.name} />
+          Name: <AvatarLink id={props.id} />
         </div>
         <div>
           Town: <AvatarTown town={props.town} />

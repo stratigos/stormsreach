@@ -17,7 +17,6 @@ RentalList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       avatar_id: PropTypes.number,
-      avatar_name: PropTypes.string.isRequired,
       town: PropTypes.string.isRequired,
       location: PropTypes.string,
       description: PropTypes.string,

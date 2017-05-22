@@ -3,7 +3,6 @@
     {
       "id": 1,
       "avatar_id": 1,
-      "avatar_name": "Black Tortoise",
       "town": "Storm's Reach",
       "location": "-68.9, 36.0, 423.8",
       "price": 100,
@@ -16,7 +15,6 @@
     {
       "id": 2,
       "avatar_id": 1,
-      "avatar_name": "Black Tortoise",
       "town": "Xenos",
       "location": "",
       "price": 100,
