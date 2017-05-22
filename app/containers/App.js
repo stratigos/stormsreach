@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // Application Containers and Components.
 import About from '../components/About';
 import AvatarPage from '../components/AvatarPage';
+import CraftersPage from '../components/CraftersPage';
 import CraftingPage from '../components/CraftingPage';
 import RentalsPage from '../components/RentalsPage';
 import Header from '../components/Header';
@@ -32,7 +33,8 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={Home} placeholderProp='Hello!' />
           <Route path='/housing' component={RentalsPage} />
-          <Route path='/crafting' component={CraftingPage} />
+          <Route exact path='/crafting' component={CraftingPage} />
+          <Route path='/crafting/crafters' component={CraftersPage} />
           <Route path='/community' component={Community} />
           <Route path='/about' component={About} />
           <Route path='/donate' component={Donate} />
