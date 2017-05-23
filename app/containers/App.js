@@ -7,14 +7,15 @@ import AvatarPage from '../components/AvatarPage';
 import CommunityPage from '../components/CommunityPage';
 import CraftersPage from '../components/CraftersPage';
 import CraftingPage from '../components/CraftingPage';
-import RentalsPage from '../components/RentalsPage';
 import Header from '../components/Header';
 import HomePage from '../components/HomePage';
 import LoadingNotifier from '../components/LoadingNotifier';
 import NotFound from '../components/NotFound';
-
+import RentalsPage from '../components/RentalsPage';
+import VendorsPage from '../components/VendorsPage';
+import VendorPage from '../components/VendorPage';
 // Note: these arent "real" containers, just placeholders for conversion to
-//  a Redux app, awaiting implementation.
+//  the new application namespace (since Redux data store was implemented).
 import Donate from './Donate';
 import UserProfile from './UserProfile';
 
@@ -40,6 +41,8 @@ const App = () => {
           <Route path='/donate' component={Donate} />
           <Route path='/profile' component={UserProfile} />
           <Route path='/avatars/:avatarId' component={AvatarPage} />
+          <Route exact path='/vendors' component={VendorsPage} />
+          <Route path='/vendors/:vendorId' component={VendorPage} />
           <Route path='*' status={404} component={NotFound} />
         </Switch>
       </div>

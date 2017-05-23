@@ -13,16 +13,16 @@ export const DEFAULT_CRAFTER = {
 };
 
 /**
- * Text to display for an AvatarLink if name is blank.
+ * Text to display when Link Components text-children are blank.
  */
 export const DEFAULT_AVATAR_LINK_TEXT = 'Avatar Page';
+export const DEFAULT_VENDOR_LINK_TEXT = 'Vendor Page';
 
 /**
  * API host to application "back end".
  *  - Using local JSON file data store for now, back end TBD.
  */
 export const BASE_URL = '../data/';
-
 
 /**
  * Commonly toggled CSS classes belonging to CSS frameworks or application

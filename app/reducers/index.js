@@ -5,20 +5,16 @@
 import { combineReducers } from 'redux';
 import avatarsReducer from './avatars_reducer';
 import rentalsReducer from './rentals_reducer';
+import vendorsReducer from './vendors_reducer';
 import loadingReducer from './loading_reducer';
 // import errorReducer from './error_reducer';
-// import uiReducer from './ui_reducer';
 
 /**
- * Main Reducer.
+ * Main Reducer. Each key represents a different piece of application state.
  */
-// export default combineReducers({
-//   avatars: avatarsReducer,
-//   error: errorReducer,
-//   serverStatus: uiReducer
-// });
 export default combineReducers({
   avatars: avatarsReducer,
   rentals: rentalsReducer,
+  vendors: vendorsReducer,
   loading: loadingReducer
 });

@@ -2,7 +2,7 @@
  * Load data from a remote server.
  ******************************************************************************/
 
-import { FETCH_AVATARS, FETCH_RENTALS } from '../constants/action_types';
+import { FETCH_AVATARS, FETCH_RENTALS, FETCH_VENDORS } from '../constants/action_types';
 import { BASE_URL } from '../constants/defaults';
 import apiError from '../actions/api_error';
 import apiStart from '../actions/api_start';
@@ -16,7 +16,9 @@ import apiDone from '../actions/api_done';
 const apiMiddleware = ({ dispatch }) => next => action => {
 
   // Pass through if not an API call.
-  if(action.type !== FETCH_AVATARS && action.type !== FETCH_RENTALS) {
+  // Multiple conditional checks is faster and less resource intensive than
+  //  creating an array and iterating through it.
+  if(action.type !== FETCH_AVATARS && action.type !== FETCH_RENTALS && action.type !== FETCH_VENDORS) {
     next(action);
     return;
   }

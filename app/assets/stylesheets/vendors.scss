@@ -1,0 +1,69 @@
+/******************************************************************************
+* Vendor / Vendors Page Styles
+*******************************************************************************/
+
+
+/**
+ * Vendors Page
+ */
+
+.vendors-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin: 5px;
+  }
+
+}
+
+.vendors-list-container {
+  display: flex;
+  justify-content: center;
+
+  .vendor {
+    max-width: 300px;
+  }
+}
+
+.vendor {
+  padding: 5px 0px;
+  margin: 5px 5px;
+}
+
+.vendor > div {
+  margin: 5px 0;
+
+  a {
+    font-size: 1.1em;
+  }
+}
+
+.vendor-description {
+  margin: 5px 0px;
+  font-size: 1.1em;
+}
+
+/**
+ * Vendor Page
+ */
+
+.vendor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .vendor {
+    max-width: 800px;
+
+    a {
+      font-size: 1em;
+    }
+  }
+
+  .vendor-description {
+    margin: 20px 0;
+    font-size: 1.3em;
+  }
+}

@@ -37,6 +37,12 @@ const CraftingPage = (props) => {
               <li>
                 <Link to={`${props.location.pathname}/crafters`}>View Crafters</Link>
               </li>
+              <li>
+                <Link to='/vendors'>Meet Vendors</Link>
+              </li>
+              <li>
+                <Link to='#'>Browse Shops<br/>(<em>coming soon</em>)</Link>
+              </li>
             </ul>
           </div>
 

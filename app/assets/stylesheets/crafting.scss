@@ -38,6 +38,11 @@
   align-items: center;
   font-size: 1.3em;
   text-align: center;
+
+  li {
+    margin-bottom: 50px;
+    min-width: 150px;
+  }
 }
 .crafting-links-list-left {
   padding-right: 8%;
