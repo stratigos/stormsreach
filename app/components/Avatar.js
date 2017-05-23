@@ -49,7 +49,7 @@ const Avatar = (props) => {
       </div>
   );
 
-}
+};
 
 Avatar.defaultProps = {
   avatar: {
@@ -72,6 +72,6 @@ Avatar.propTypes = {
     shop: PropTypes.string,
     abilities: PropTypes.arrayOf(PropTypes.string)
   }).isRequired
-}
+};
 
 export default Avatar;
