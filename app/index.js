@@ -10,6 +10,7 @@ import store from './stores/store';
 // Load the Redux Actions which will initialize data store content.
 import fetchAvatars from './actions/fetch_avatars';
 import fetchRentals from './actions/fetch_rentals';
+import fetchShops   from './actions/fetch_shops';
 import fetchVendors from './actions/fetch_vendors';
 // `Provider` is Redux binding to React.
 import { Provider } from 'react-redux';
@@ -21,6 +22,7 @@ import './assets/stylesheets/index.scss';
 // Set initial application state.
 store.dispatch(fetchAvatars());
 store.dispatch(fetchRentals());
+store.dispatch(fetchShops());
 store.dispatch(fetchVendors());
 
 /**

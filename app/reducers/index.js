@@ -5,6 +5,7 @@
 import { combineReducers } from 'redux';
 import avatarsReducer from './avatars_reducer';
 import rentalsReducer from './rentals_reducer';
+import shopsReducer from './shops_reducer';
 import vendorsReducer from './vendors_reducer';
 import loadingReducer from './loading_reducer';
 // import errorReducer from './error_reducer';
@@ -15,6 +16,7 @@ import loadingReducer from './loading_reducer';
 export default combineReducers({
   avatars: avatarsReducer,
   rentals: rentalsReducer,
+  shops:   shopsReducer,
   vendors: vendorsReducer,
   loading: loadingReducer
 });

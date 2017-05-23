@@ -17,6 +17,7 @@ export const DEFAULT_CRAFTER = {
  */
 export const DEFAULT_AVATAR_LINK_TEXT = 'Avatar Page';
 export const DEFAULT_VENDOR_LINK_TEXT = 'Vendor Page';
+export const DEFAULT_SHOP_LINK_TEXT   = 'Shop Page';
 
 /**
  * API host to application "back end".

@@ -1,0 +1,69 @@
+/******************************************************************************
+* Shop / Shops Page Styles
+*******************************************************************************/
+
+
+/**
+ * Shops Page
+ */
+
+.shops-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin: 5px;
+  }
+
+}
+
+.shops-list-container {
+  display: flex;
+  justify-content: center;
+
+  .shop {
+    max-width: 300px;
+  }
+}
+
+.shop {
+  padding: 5px 0px;
+  margin: 5px 5px;
+}
+
+.shop > div {
+  margin: 5px 0;
+
+  a {
+    font-size: 1.1em;
+  }
+}
+
+.shop-description {
+  margin: 5px 0px;
+  font-size: 1.1em;
+}
+
+/**
+ * Shop Page
+ */
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .shop {
+    max-width: 800px;
+
+    a {
+      font-size: 1em;
+    }
+  }
+
+  .shop-description {
+    margin: 20px 0;
+    font-size: 1.3em;
+  }
+}

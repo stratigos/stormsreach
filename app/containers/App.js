@@ -12,6 +12,8 @@ import HomePage from '../components/HomePage';
 import LoadingNotifier from '../components/LoadingNotifier';
 import NotFound from '../components/NotFound';
 import RentalsPage from '../components/RentalsPage';
+import ShopsPage from '../components/ShopsPage';
+import ShopPage from '../components/ShopPage';
 import VendorsPage from '../components/VendorsPage';
 import VendorPage from '../components/VendorPage';
 // Note: these arent "real" containers, just placeholders for conversion to
@@ -41,6 +43,8 @@ const App = () => {
           <Route path='/donate' component={Donate} />
           <Route path='/profile' component={UserProfile} />
           <Route path='/avatars/:avatarId' component={AvatarPage} />
+          <Route exact path='/shops' component={ShopsPage} />
+          <Route path='/shops/:shopId' component={ShopPage} />
           <Route exact path='/vendors' component={VendorsPage} />
           <Route path='/vendors/:vendorId' component={VendorPage} />
           <Route path='*' status={404} component={NotFound} />

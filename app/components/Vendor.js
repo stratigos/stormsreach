@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AvatarLink from './AvatarLink';
 import VendorLink from './VendorLink';
+import ShopLink from './ShopLink';
 
 /**
  * Handle logic for displaying link to Vendor page.
@@ -26,12 +27,22 @@ const displayImage = (image) => {
 };
 
 /**
+ * Handle logic for optional ShopLink display.
+ */
+const displayShop = (shop_id) => {
+  return shop_id !== undefined
+    ? <div><span className='list-label'>Shop:</span> <ShopLink id={shop_id} /></div>
+    : '';
+}
+
+/**
  * Functional component for composing Vendor data.
  */
 const Vendor = (props) => {
 
   let nameOrLink = displayNameOrLink(props.vendor.name, props.vendor.id, props.location.pathname);
   let vendorImg  = displayImage(props.vendor.image, props.vendor.name);
+  let shop       = displayShop(props.vendor.shop_id);
 
   return(
     <div className='vendor'>
@@ -42,9 +53,7 @@ const Vendor = (props) => {
       <div>
         <span className='list-label'>Host:</span> <AvatarLink id={props.vendor.avatar_id} />
       </div>
-      <div>
-        <span className='list-label'>Shop:</span> <em>*coming soon*</em>
-      </div>
+      {shop}
       <div>
         <span className='list-label'>Town:</span> {props.vendor.town}
       </div>

@@ -41,7 +41,7 @@ const CraftingPage = (props) => {
                 <Link to='/vendors'>Meet Vendors</Link>
               </li>
               <li>
-                <Link to='#'>Browse Shops<br/>(<em>coming soon</em>)</Link>
+                <Link to='/shops'>Browse Shops</Link>
               </li>
             </ul>
           </div>
