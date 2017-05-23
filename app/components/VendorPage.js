@@ -8,7 +8,7 @@ import HomepageLink from './HomepageLink';
 
 const VendorPage = (props) => {
   return(
-    <div className="vendor-container">
+    <div className='vendor-container'>
       <VendorContainer vendorId={Number(props.match.params.vendorId)} />
       <HomepageLink />
     </div>
