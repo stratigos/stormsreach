@@ -20,12 +20,6 @@ export const DEFAULT_VENDOR_LINK_TEXT = 'Vendor Page';
 export const DEFAULT_SHOP_LINK_TEXT   = 'Shop Page';
 
 /**
- * API host to application "back end".
- *  - Using local JSON file data store for now, back end TBD.
- */
-export const BASE_URL = '../data/';
-
-/**
  * Commonly toggled CSS classes belonging to CSS frameworks or application
  *  styles.
  */

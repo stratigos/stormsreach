@@ -1,9 +1,10 @@
 import { FETCH_SHOPS, SET_SHOPS } from '../constants/action_types';
+import { API_ENDPOINT_SHOPS } from '../constants/api_endpoints';
 
 const fetchShops = () => ({
   type: FETCH_SHOPS,
   payload: {
-    url: 'shops.json',
+    url: API_ENDPOINT_SHOPS,
     success: SET_SHOPS
   }
 });

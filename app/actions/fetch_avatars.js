@@ -1,4 +1,5 @@
 import { FETCH_AVATARS, SET_AVATARS } from '../constants/action_types';
+import { API_ENDPOINT_AVATARS } from '../constants/api_endpoints';
 
 /**
  * An ActionCreator to kick off an asynch API call to fetch initial app state.
@@ -9,7 +10,7 @@ import { FETCH_AVATARS, SET_AVATARS } from '../constants/action_types';
 const fetchAvatars = () => ({
   type: FETCH_AVATARS,
   payload: {
-    url: 'avatars.json',
+    url: API_ENDPOINT_AVATARS,
     success: SET_AVATARS
   }
 });

@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 import { FETCH_AVATARS, FETCH_RENTALS, FETCH_SHOPS, FETCH_VENDORS } from '../constants/action_types';
-import { BASE_URL } from '../constants/defaults';
+import { BASE_URL } from '../constants/api_endpoints';
 import apiError from '../actions/api_error';
 import apiStart from '../actions/api_start';
 import apiDone from '../actions/api_done';
