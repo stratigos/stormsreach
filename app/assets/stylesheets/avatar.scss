@@ -1,0 +1,44 @@
+/******************************************************************************
+* Avatar Page and Avatar Component Styles
+*******************************************************************************/
+
+/**
+ * Avatar Page Style
+ */
+
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/**
+ * Individual Avatars
+ */
+
+.avatar {
+  margin: 10px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.avatar-attributes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.avatar-abilities {
+  margin-top: 5px;
+}
+
+.avatar-services-list {
+  margin: 5px 10px;
+}
+
+.avatar-image {
+  width: 200px;
+  height: 200px;
+}

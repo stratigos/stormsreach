@@ -74,32 +74,12 @@
 
 .crafter-list-container {
   font-size: 0.8em;
+  padding: 0 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
 
-.crafter {
-  margin: 10px;
-  display: flex;
-  width: 450px;
-  justify-content: flex-start;
-}
-
-.crafter-attributes {
-  margin-right: 10px;
-  width: 200px;
-}
-
-.crafting-abilities {
-  margin-top: 5px;
-}
-
-.crafting-abilities > ul {
-  margin: 5px 10px;
-}
-
-.crafter-image {
-  width: 200px;
-  height: 200px;
+  .avatar {
+    width: 450px;
+  }
 }

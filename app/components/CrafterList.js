@@ -1,30 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Crafter from './Crafter';
-import { DEFAULT_CRAFTER } from '../constants/defaults';
+import Avatar from './Avatar';
 
 const CrafterList = ({ avatars }) => {
   return(
     <div className='crafter-list-container'>
       {avatars.map( (avatar) => {
-        return(<Crafter key={avatar.id} {...avatar} />);
+        return(<Avatar key={avatar.id} avatarId={avatar.id} avatar={avatar} />);
       })}
     </div>
   );
 }
-
-CrafterList.defaultProps = {
-  avatars: [
-  '0': {
-      id: DEFAULT_CRAFTER.id,
-      name: DEFAULT_CRAFTER.name,
-      image: DEFAULT_CRAFTER.image,
-      town: DEFAULT_CRAFTER.town,
-      shop: DEFAULT_CRAFTER.shop,
-      abilities: DEFAULT_CRAFTER.abilities
-    }
-  ]
-};
 
 CrafterList.propTypes = {
   avatars: PropTypes.arrayOf(
