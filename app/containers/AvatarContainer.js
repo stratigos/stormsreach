@@ -13,10 +13,34 @@ const getCurrentAvatar = (avatars, avatarId) => {
 };
 
 /**
+ * Get the Avatar's associated Shop ID.
+ */
+const getCurrentShop = (shops, avatarId) => {
+  for (let shop of shops) {
+    if(shop.avatar_id == avatarId) {
+      return shop.id;
+    }
+  }
+};
+
+/**
+ * Get the Avatar's associated Vendor ID.
+ */
+const getCurrentVendor = (vendors, avatarId) => {
+  for (let vendor of vendors) {
+    if(vendor.avatar_id == avatarId) {
+      return vendor.id;
+    }
+  }
+};
+
+/**
  * Connect Avatar state to Redux data store.
  */
 const mapStateToProps = (state, ownProps) => ({
-  avatar: getCurrentAvatar(state.avatars, ownProps.avatarId)
+  avatar: getCurrentAvatar(state.avatars, ownProps.avatarId),
+  shopId: getCurrentShop(state.shops, ownProps.avatarId),
+  vendorId: getCurrentVendor(state.vendors, ownProps.avatarId)
 });
 
 /**

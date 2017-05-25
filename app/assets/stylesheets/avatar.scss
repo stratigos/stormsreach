@@ -27,7 +27,11 @@
   flex-direction: column;
   align-items: flex-start;
   margin-right: 10px;
-  width: 200px;
+  width: 400px;
+}
+
+.avatar-attributes > div {
+  margin: 2px 0px;
 }
 
 .avatar-abilities {

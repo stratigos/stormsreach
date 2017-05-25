@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AvatarLink from './AvatarLink';
+import ShopLink from './ShopLink';
+import VendorLink from './VendorLink';
 
 /**
  * Displays an Avatar's image.
@@ -56,7 +58,45 @@ const AvatarAbilitiesList = (props) => {
   }
 
   return abilitiesList;
-}
+};
+
+AvatarAbilitiesList.propTypes = {
+  abilities: PropTypes.arrayOf(PropTypes.string)
+};
+
+/**
+ * Handle optional display of ShopLink
+ */
+const AvatarShopLink = (props) => {
+  let shopLink = null;
+
+  if (props.id) {
+    shopLink = <ShopLink id={props.id} />;
+  }
+
+  return shopLink;
+};
+
+AvatarShopLink.propTypes = {
+  id: PropTypes.number
+};
+
+/**
+ * Handle optional display of VendorLink
+ */
+const AvatarVendorLink = (props) => {
+  let vendorLink = null;
+
+  if (props.id) {
+    vendorLink = <VendorLink id={props.id} />;
+  }
+
+  return vendorLink;
+};
+
+AvatarVendorLink.propTypes = {
+  id: PropTypes.number
+};
 
 /**
  * Stateless Functional Component for displaying a member of the site, i.e.,
@@ -73,10 +113,10 @@ const Avatar = (props) => {
           <span className='list-label'>Town:</span> {props.avatar.town}
         </div>
         <div>
-          <span className='list-label'>Shop:</span> <em>coming soon!</em>
+          <span className='list-label'>Shop:</span> <AvatarShopLink id={props.shopId} />
         </div>
         <div>
-          <span className='list-label'>Vendor:</span> <em>coming soon!</em>
+          <span className='list-label'>Vendor:</span> <AvatarVendorLink id={props.vendorId} />
         </div>
         <div className='avatar-abilities'>
           <span className='list-label'>Services:</span>
@@ -98,7 +138,9 @@ Avatar.defaultProps = {
     town: "Storm's Reach",
     shop: undefined,
     abilities: []
-  }
+  },
+  shopId: undefined,
+  vendorId: undefined
 };
 
 Avatar.propTypes = {
@@ -110,7 +152,9 @@ Avatar.propTypes = {
     town: PropTypes.string.isRequired,
     shop: PropTypes.string,
     abilities: PropTypes.arrayOf(PropTypes.string)
-  }).isRequired
+  }).isRequired,
+  shopId: PropTypes.number,
+  vendorId: PropTypes.number
 };
 
 export default Avatar;

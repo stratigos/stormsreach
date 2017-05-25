@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Avatar from './Avatar';
+import AvatarContainer from '../containers/AvatarContainer';
 
 const CrafterList = ({ avatars }) => {
   return(
     <div className='crafter-list-container'>
       {avatars.map( (avatar) => {
-        return(<Avatar key={avatar.id} avatarId={avatar.id} avatar={avatar} />);
+        return(<AvatarContainer key={avatar.id} avatarId={avatar.id} />);
       })}
     </div>
   );

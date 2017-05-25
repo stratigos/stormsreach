@@ -5,7 +5,6 @@
       "name": "Black Tortoise",
       "image": "http://res.cloudinary.com/stormsreach/image/upload/v1494110007/black-tortoise-200_ujalrg.jpg",
       "town": "Storm's Reach",
-      "shop": "Storm Shadow Tavern",
       "abilities": ["Tailoring", "Cooking", "Carpentry"]
     },
     {
@@ -13,7 +12,6 @@
       "name": "Sol",
       "image": "http://res.cloudinary.com/stormsreach/image/upload/v1494536109/sol.png",
       "town": "Storm's Reach",
-      "shop": "",
       "abilities": ["Tailoring", "Blacksmith", "Carpentry", "Cooking", "Alchemy"]
     },
     {
@@ -21,7 +19,6 @@
       "name": "Woody Craftinjack",
       "image": "http://res.cloudinary.com/stormsreach/image/upload/v1494111485/SoA_n3zilz.jpg",
       "town": "Storm's Reach",
-      "shop": "The Double Deuce Tavern",
       "abilities": ["Alchemy"]
     }
   ]
