@@ -8,9 +8,8 @@ ReactJS
 -------
  * :sparkle: v 15.5
  * Modularized and composable.
-   * For presentation, I favor [stateless functional components](https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/), such as **[Crafter](app/components/Crafter.js)** or **[Avatar](app/components/Avatar.js)**.
+   * For presentation, I favor [stateless functional components](https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/), such as **[Avatar](app/components/Avatar.js)** or **[Rental](app/components/Rental.js)**.
    * I like to encapsulate UI state management and flow with [Higher-Order Containers](https://facebook.github.io/react/docs/higher-order-components.html) or Components, like **[CraftersContainer](app/containers/CraftersContainer.js)** or **[AvatarContainer](app/containers/AvatarContainer.js)**.
-   * I would consider most other responsibilities outside of React's domain.
 
 Redux
 -----
