@@ -5,7 +5,7 @@
       "avatar_id": 1,
       "town": "Storm's Reach",
       "location": "-68.9, 36.0, 423.8",
-      "price": 100,
+      "price": 50,
       "description": "Farm planting beds for rent up top. Several village stone & timber basement apartments with furnished livingroom available at low cost!",
       "size": "Village",
       "basement": true,
@@ -17,12 +17,12 @@
       "avatar_id": 1,
       "town": "Xenos",
       "location": "",
-      "price": 100,
+      "price": 25,
       "description": "Farm planting beds for rent on 4th floor, 3 small row rooms avail, and one 5 story row basement available, at low cost!",
       "size": "Row",
       "basement": true,
       "name": "",
-      "published_at": "2017-05-20"
+      "published_at": "2017-05-21"
     }
   ]
 }
