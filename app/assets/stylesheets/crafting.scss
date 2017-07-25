@@ -86,4 +86,11 @@
   .avatar-attributes {
     width: 200px;
   }
+
+  .vendor-description {
+    max-height: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

@@ -12,6 +12,19 @@
       "size": "Town",
       "basement": false,
       "published_at": "2017-05-22"
+    },
+    {
+      "id": 2,
+      "avatar_id": 3,
+      "vendor_id": 2,
+      "name": "The Agora at Jaanaford",
+      "town": "Jaanaford",
+      "location": "",
+      "image": "",
+      "description": "From the main entrance to Jaanaford, take an immediate left and look for the elven greenhouse. We are located in the circle of lots southwest of the Jaana River. \"Trammeled Traveler\" Bed & Breakfast - A peaceful retreat from the hustle and bustle of Novian city life. We offer fishing trips and light player-quest adventuring. \"Jaan's Earth Emporium\" - Featuring earth enchanted gear from the finest crafters all throughout Novia. Jaan's also sells scroll and potion packs at very reasonable prices. \"Chef Cantabrigian's Cafe\" - Off the beaten path gastropub specializing in local wild game. Our picnic packs are a steal! \"Druidic Gardens\" - A community gardening space and meditation room. \"Circle and Stones\" Sparring Arena - A place to train and refine your skills which also doubles as a local gathering spot for expedition teams.",
+      "size": "Village",
+      "basement": false,
+      "published_at": "2017-07-25"
     }
   ]
 }
