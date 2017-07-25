@@ -16,10 +16,10 @@
     },
     {
       "id": 3,
-      "name": "Woody Craftinjack",
-      "image": "http://res.cloudinary.com/stormsreach/image/upload/v1494111485/SoA_n3zilz.jpg",
-      "town": "Storm's Reach",
-      "abilities": ["Alchemy"]
+      "name": "Jaanelle DeJure",
+      "image": "http://res.cloudinary.com/stormsreach/image/upload/v1500994338/9zu6c9.jpg_kf2ni6.png",
+      "town": "Jaanaford",
+      "abilities": ["Alchemy", "Blacksmith", "Carpentry", "Cooking"]
     }
   ]
 }
