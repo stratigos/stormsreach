@@ -75,6 +75,7 @@ const Shop = (props) => {
 };
 
 Shop.defaultProps = {
+  shopId: 0,
   shop: {
     id: 0,
     avatar_id: undefined,
