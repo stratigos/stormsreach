@@ -64,7 +64,7 @@ const Shop = (props) => {
         <span className='list-label'>Lot Size:</span> {props.shop.size}
       </div>
       <div>
-        <span className='list-label'>Basement Access?</span> {props.basement ? 'Yes' : 'No'}
+        <span className='list-label'>Basement Access?</span> {props.shop.basement ? 'Yes' : 'No'}
       </div>
       <div>
         <span className='list-label'>Listed date:</span> {props.shop.published_at}
