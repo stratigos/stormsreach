@@ -10,7 +10,7 @@
       "image": "http://res.cloudinary.com/stormsreach/image/upload/c_scale,w_500/v1495492587/storm_shadow_tavern_R41_b3nujx.jpg",
       "description": "All travelers, revelers, arcanists and adventurers are welcomed to Storm Shadow Tavern! Feast on the fine cooking, browse the wares of traveler Slapping Bird, or practice your crafting skills with public expert crafting stations. Relax on the spacious lawn, or head upstairs to read a book or practice the piano. Be sure to tip your server!",
       "size": "Town",
-      "basement": false,
+      "basement": true,
       "published_at": "2017-05-22"
     },
     {
