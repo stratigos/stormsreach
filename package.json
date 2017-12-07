@@ -1,6 +1,6 @@
 {
   "name": "stormsreach",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Website Source Code for www.stormsreach.com",
   "homepage": "http://www.stormsreach.com",
   "main": "index.js",
@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "deep-freeze": "0.0.1",
-    "express": "^4.15.2",
+    "express": "^4.16.0",
     "prop-types": "^15.6.0",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
