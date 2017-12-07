@@ -69,6 +69,7 @@ const Vendor = (props) => {
 };
 
 Vendor.defaultProps = {
+  vendorId: 0,
   vendor: {
     id: 0,
     avatar_id: undefined,
