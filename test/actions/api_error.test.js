@@ -1,12 +1,12 @@
 import apiErrorAction from '../../app/actions/api_error'
 import * as actionTypes from '../../app/constants/action_types'
 
-describe('error action', () => {
+describe('Error ActionCreator', () => {
 
-  it('creates an action to broadcast a general error', () => {
+  it('creates an action to broadcast a general error message or status code', () => {
 
-    const errorText = 'This doesnt matter unless its an HTTP Status code...';
-    const error     = 'Error: Something went wrong with API call.';
+    const errorText = 'Internal Servers are Melting!';
+    const error     = `Error: External call returned error message or HTTP Status: ${errorText}`;
 
     const expectedAction = {
       type: actionTypes.BROADCAST_ERRORS,
@@ -16,10 +16,10 @@ describe('error action', () => {
     expect(apiErrorAction(errorText)).toEqual(expectedAction);
   });
 
-  it('creates an action to broadcast an erroneous HTTP Status code was returned', () => {
+  it('allows an HTTP Status code to be printed in the error', () => {
 
     const statusCode = 401;
-    const error      = `Error: External call yielded HTTP Status: ${statusCode}`;
+    const error      = `Error: External call returned error message or HTTP Status: ${statusCode}`;
 
     const expectedAction = {
       type: actionTypes.BROADCAST_ERRORS,
