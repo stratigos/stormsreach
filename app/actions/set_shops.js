@@ -1,6 +1,6 @@
 import { SET_SHOPS } from '../constants/action_types';
 
-const setShops = (shops_json) => (
+const setShops = (shops_json) => {
 
   let shops = shops_json.shops;
 
@@ -8,6 +8,6 @@ const setShops = (shops_json) => (
     type: SET_SHOPS,
     payload: { shops }
   }
-);
+};
 
 export default setShops;
