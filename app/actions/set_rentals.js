@@ -1,6 +1,6 @@
 import { SET_RENTALS } from '../constants/action_types';
 
-const setRentals = (rentals_json) => (
+const setRentals = (rentals_json) => {
 
   let rentals = rentals_json.rentals;
 
@@ -8,6 +8,6 @@ const setRentals = (rentals_json) => (
     type: SET_RENTALS,
     payload: { rentals }
   }
-);
+};
 
 export default setRentals;
