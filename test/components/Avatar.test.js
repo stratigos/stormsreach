@@ -5,7 +5,7 @@ import Avatar from '../../app/components/Avatar';
 
 describe('<Avatar /> Component', () => {
 
-  it('should be a functional component', () => {
+  it('is a functional component', () => {
     expect( typeof Avatar ).toEqual('function');
   });
 

@@ -7,25 +7,25 @@ describe('<HomepageLink /> Component', () => {
 
   describe('as a stateless functional component', () => {
 
-    it('should be a function', () => {
+    it('is a function', () => {
       expect( typeof HomepageLink ).toEqual('function');
     });
 
   });
 
-  it('should not have propTypes defined', () => {
+  it('does not have propTypes defined', () => {
     expect( shallow(<HomepageLink />).propTypes ).toBeUndefined();
   });
 
-  it('should not have defaultProps', () => {
+  it('does not have defaultProps', () => {
     expect( shallow(<HomepageLink />).defaultProps ).toBeUndefined();
   });
 
-  it('should render its containing div', () => {
+  it('renders its containing div', () => {
     expect( shallow(<HomepageLink />).is('div.homepage-link-container') ).toBe(true);
   });
 
-  it('should render a Link element for the home page', () => {
+  it('renders a Link element for the home page', () => {
     const testHomepageLink = shallow(<HomepageLink />);
     const childLink        = testHomepageLink.find('Link');
 

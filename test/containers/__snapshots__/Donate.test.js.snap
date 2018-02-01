@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Donate /> Component should render a page of static content 1`] = `
+exports[`<Donate /> Component renders a page of static content 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {},

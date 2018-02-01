@@ -3,30 +3,29 @@ import { shallow } from 'enzyme';
 
 import AboutPage from '../../app/components/AboutPage';
 
-describe('<About /> Component', () => {
+describe('<AboutPage /> Component', () => {
 
-  // Still deciding on if and how to test this.
   describe('as a stateless functional component', () => {
 
-    it('should be a function', () => {
+    it('is a function', () => {
       expect( typeof AboutPage ).toEqual('function');
     });
 
   });
 
-  it('should not have propTypes defined', () => {
+  it('does not have propTypes defined', () => {
     expect( shallow(<AboutPage />).propTypes ).toBeUndefined();
   });
 
-  it('should not have defaultProps', () => {
+  it('does not have defaultProps', () => {
     expect( shallow(<AboutPage />).defaultProps ).toBeUndefined();
   });
 
-  it('should render its containing div', () => {
+  it('renders its containing div', () => {
     expect( shallow(<AboutPage />).is('div.about-container') ).toBe(true);
   });
 
-  it('should display text about the site', () => {
+  it('displays text about the site', () => {
     expect( shallow(<AboutPage />).text() ).toMatch(/About this application/i);
   });
 
