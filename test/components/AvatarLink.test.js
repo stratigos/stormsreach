@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { AvatarLink } from '../../app/components/AvatarLink';
+import { AvatarLink, getAvatarNameFromId } from '../../app/components/AvatarLink';
 import { DEFAULT_AVATAR_LINK_TEXT as testDefaultLinkText } from '../../app/constants/defaults';
 
 /**
@@ -62,14 +62,53 @@ describe('<AvatarLink /> Component', () => {
 
 });
 
+/**
+ * Test the `getAvatarNameFromId` function in isolation, with a stubbed fixture
+ *  rather than response from a data store.
+ */
 describe('AvatarLink getAvatarNameFromId()', () => {
 
+  let avatarList, avatarId, avatarName, notAvatarId;
+
+  beforeEach(() => {
+    avatarList = [
+      {
+        'id': 1,
+        'name': 'Lord British',
+        'image': 'https://example.com/lordbritish.jpg',
+        'town': 'Storm\'s Reach',
+        'abilities': ['Tailoring', 'Cooking', 'Carpentry']
+      },
+      {
+        'id': 2,
+        'name': 'Dark Star',
+        'image': 'https://example.com/darkstar.jpg',
+        'town': 'Aerie',
+        'abilities': ['Tailoring', 'Blacksmith', 'Carpentry', 'Cooking', 'Alchemy']
+      },
+      {
+        'id': 3,
+        'name': 'Atos',
+        'image': 'https://example.com/atos.jpg',
+        'town': 'Xenos',
+        'abilities': ['Alchemy', 'Blacksmith', 'Carpentry', 'Cooking']
+      }
+    ];
+    avatarId = 2;
+    avatarName = 'Dark Star';
+    notAvatarId = 1024;
+  });
+
   describe('when an Avatar ID is present in the list', () => {
-    xit('selects the correct Avatar name');
+    it('selects the correct Avatar name', () => {
+      expect( getAvatarNameFromId(avatarList, avatarId) ).toBe(avatarName);
+    });
   });
 
   describe('when an Avatar ID is not present in the list', () => {
-    xit('selects default Avatar link text');
+    it('selects default Avatar link text', () => {
+      expect( getAvatarNameFromId(avatarList, notAvatarId) ).toBe(testDefaultLinkText);
+    });
   });
 
 });
