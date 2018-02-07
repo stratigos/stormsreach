@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import { AvatarLink } from '../../app/components/AvatarLink';
+import { DEFAULT_AVATAR_LINK_TEXT as testDefaultLinkText } from '../../app/constants/defaults';
 
 /**
  * Unit test AvatarLink, to avoid having to import Redux store, or to mock the
@@ -20,7 +21,7 @@ describe('<AvatarLink /> Component', () => {
    */
   let avatarId, avatarName;
 
-  describe('with an Avatar name available', () => {
+  describe('with an available Avatar', () => {
 
     /**
      * Pass the `Avatar.name` property directly into the element attributes,
@@ -49,8 +50,14 @@ describe('<AvatarLink /> Component', () => {
 
   });
 
-  describe('without an available Avatar name', () => {
-    xit('displays bold default link text');
+  describe('without an available Avatar', () => {
+
+    it('displays bold default link text', () => {
+      expect(
+        shallow(<AvatarLink name={testDefaultLinkText} />).find('strong').text()
+      ).toMatch(testDefaultLinkText);
+    });
+
   });
 
 });
