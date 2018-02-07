@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { DEFAULT_AVATAR_LINK_TEXT } from '../constants/defaults';
 
-const AvatarLink = (props) => {
+export const AvatarLink = (props) => {
 
   let nameWithLink = (props.children !== undefined)
     ? props.children
@@ -32,7 +32,7 @@ AvatarLink.propTypes = {
  *  current Avatar ID. This allows calling components to require less state
  *  (i.e., the Avatar name isn't needed, just the ID).
  */
-const getAvatarNameFromId = (avatars, avatar_id) => {
+export const getAvatarNameFromId = (avatars, avatar_id) => {
   return (avatars[(avatar_id - 1)] !== undefined)
     ? avatars[(avatar_id - 1)].name
     : DEFAULT_AVATAR_LINK_TEXT;
