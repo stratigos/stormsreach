@@ -20,29 +20,49 @@ describe('<AvatarLink /> Component', () => {
    */
   let avatarId, avatarName;
 
-  /**
-   * Pass the `Avatar.name` property directly into the element attributes,
-   *  rather than deriving it from the data store. This allows for unit testing
-   *  of the component in isolation, rather than having to build and mock the
-   *  Provider, ActionCreator, `mapStateToProps` function, and any other
-   *  dependencies, which is more suitable for integration testing.
-   */
-  beforeEach(() => {
-    avatarId = 64;
-    avatarName = 'Lord British';
-    wrapper = shallow(<AvatarLink id={avatarId} name={avatarName} />);
+  describe('with an Avatar name available', () => {
+
+    /**
+     * Pass the `Avatar.name` property directly into the element attributes,
+     *  rather than deriving it from the data store. This allows for unit testing
+     *  of the component in isolation, rather than having to build and mock the
+     *  Provider, ActionCreator, `mapStateToProps` function, and any other
+     *  dependencies, which is more suitable for integration testing.
+     */
+    beforeEach(() => {
+      avatarId = 64;
+      avatarName = 'Lord British';
+      wrapper = shallow(<AvatarLink id={avatarId} name={avatarName} />);
+    });
+
+    it('is a functional component', () => {
+      expect( typeof AvatarLink ).toEqual('function');
+    });
+
+    it('renders a link to the Avatar', () => {
+      expect( wrapper.find('Link').length ).toEqual(1);
+    });
+
+    it('displays the Avatar name', () => {
+      expect( wrapper.find('strong').text() ).toBe(avatarName);
+    });
+
   });
 
-  it('is a functional component', () => {
-    expect( typeof AvatarLink ).toEqual('function');
+  describe('without an available Avatar name', () => {
+    xit('displays bold default link text');
   });
 
-  it('renders a link to the Avatar', () => {
-    expect( wrapper.find('Link').length ).toEqual(1);
+});
+
+describe('AvatarLink getAvatarNameFromId()', () => {
+
+  describe('when an Avatar ID is present in the list', () => {
+    xit('selects the correct Avatar name');
   });
 
-  it('displays the Avatar name', () => {
-    expect( wrapper.find('strong').text() ).toBe(avatarName);
+  describe('when an Avatar ID is not present in the list', () => {
+    xit('selects default Avatar link text');
   });
 
 });
