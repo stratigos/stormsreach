@@ -26,11 +26,11 @@ describe('<DispatchPage /> Component', () => {
   });
 
   it('has a header section', () => {
-    expect( shallow(<DispatchPage />).is('div.dispatch-header') ).toBe(true);
+    expect( shallow(<DispatchPage />).find('div.dispatch-header').length ).toBe(1);
   });
 
   it('has a body (content) section', () => {
-    expect( shallow(<DispatchPage />).is('div.dispatch-body') ).toBe(true);
+    expect( shallow(<DispatchPage />).find('div.dispatch-body').length ).toBe(1);
   });
 
   it('displays text about the site', () => {

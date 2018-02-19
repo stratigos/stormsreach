@@ -11,7 +11,7 @@ const DispatchPage = () => {
     <div className='dispatch-container'>
 
       <div className='dispatch-header'>
-        <h2>News and Happenings of Storm's Reach</h2>
+        <h2>Live News and Events of Storm's Reach</h2>
       </div>
 
       <div className='dispatch-body'>
