@@ -6,14 +6,14 @@
 
 ReactJS
 -------
- * :sparkle: v 15.5
+ * :sparkle: v 16.2.0
  * Modularized and composable.
    * For presentation, I favor [stateless functional components](https://tylermcginnis.com/functional-components-vs-stateless-functional-components-vs-stateless-components/), such as **[Avatar](app/components/Avatar.js)** or **[Rental](app/components/Rental.js)**.
    * I like to encapsulate UI state management and flow with [Higher-Order Containers](https://facebook.github.io/react/docs/higher-order-components.html) or Components, like **[CraftersContainer](app/containers/CraftersContainer.js)** or **[AvatarContainer](app/containers/AvatarContainer.js)**.
 
 Redux
 -----
- * :truck: v 3.6
+ * :truck: v 3.7.2
  * [Flux Standard Action](https://github.com/acdlite/flux-standard-action) pattern is enforced through [ActionCreators](http://redux.js.org/docs/basics/Actions.html#action-creators), like **[fetchAvatars](app/actions/fetch_avatars.js)**.
  * Data is not mutated, but diff'd and dispatched with Reducers like **[avatarsReducer](app/reducers/avatars_reducer.js)**.
  * I handle integrating with external data sources through an **[apiMiddleware](app/middlewares/api_middleware.js)**.
