@@ -15,7 +15,7 @@ const DispatchPage = () => {
       </div>
 
       <div className='dispatch-body'>
-        DUMMY CONTENT
+        UNDER CONSTRUCTION - LIVE NEWS UPDATES COMING SOON!
         {/*
           <DispatchContainer />
         */}

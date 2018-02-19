@@ -7,6 +7,7 @@ import AvatarPage from '../components/AvatarPage';
 import CommunityPage from '../components/CommunityPage';
 import CraftersPage from '../components/CraftersPage';
 import CraftingPage from '../components/CraftingPage';
+import DispatchPage from '../components/DispatchPage';
 import Header from '../components/Header';
 import HomePage from '../components/HomePage';
 import LoadingNotifier from '../components/LoadingNotifier';
@@ -39,6 +40,7 @@ const App = () => {
           <Route exact path='/crafting' component={CraftingPage} />
           <Route path='/crafting/crafters' component={CraftersPage} />
           <Route path='/community' component={CommunityPage} />
+          <Route path='/dispatch' component={DispatchPage} />
           <Route path='/about' component={AboutPage} />
           <Route path='/donate' component={Donate} />
           <Route path='/profile' component={UserProfile} />
