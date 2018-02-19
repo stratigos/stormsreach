@@ -32,7 +32,7 @@ and contributing to the [Mozilla Firefox Debugger](https://github.com/stratigos/
  (an open source application in *React*).
 * Facebook's [Jest](https://github.com/facebook/jest)
 * Air BnB's [enzyme](https://github.com/airbnb/enzyme)
-* *TBD...*
+* Pivotal Labs' [Jasmine](https://jasmine.github.io/)
 
 Performance Optimizations
 -------------------------
