@@ -20,18 +20,6 @@ Redux
    * Currently, API requests respond from static files until corresponding back end developed.  
 See [Coming Soon](#coming-soon) below.
 
-CSS Flexbox
------------
-* :ribbon: [View style source](app/assets/stylesheets/index.scss)
-* :warning: Theme TBD. While I am not a designer by profession, I can follow  
-along with a sophisticated CSS framework as good as any. For now I am using  
-CSS Flexbox to keep layouts simple, and plan to iterate on the UI once the  
-site functionality is closer to completion. While keeping up with JavaScript  
-libraries is hard, I am currently considering the following libraries:
-  * [Elemental UI](http://elemental-ui.com/)
-  * [Material UI](http://www.material-ui.com/#/)
-  * [Grommet](https://grommet.github.io/docs/)
-
 Tests
 -----
 * :computer: `npm run test`
@@ -49,6 +37,18 @@ Performance Optimizations
    * Used for external partners and dependencies, like my Image CDN.
  * :speedboat: HTTP header `Transfer-Encoding: chunked`
    * Mitigates potential TCP Slow Start issues in spotty or unstable networks.
+
+CSS Flexbox
+-----------
+* :ribbon: [View style source](app/assets/stylesheets/index.scss)
+* :warning: Theme TBD. While I am not a designer by profession, I can follow  
+along with a sophisticated CSS framework as good as any. For now I am using  
+CSS Flexbox to keep layouts simple, and plan to iterate on the UI once the  
+site functionality is closer to completion. While keeping up with JavaScript  
+libraries is hard, I am currently considering the following libraries:
+  * [Elemental UI](http://elemental-ui.com/)
+  * [Material UI](http://www.material-ui.com/#/)
+  * [Grommet](https://grommet.github.io/docs/)
 
 Heroku
 ------
