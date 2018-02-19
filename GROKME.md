@@ -66,6 +66,7 @@ the [Phoenix](http://www.phoenixframework.org/) framework, in [Elixir](http://el
   * After working for a decade with the Object Oriented paradigm, I am  curious as  
 to how well the Functional Programming paradigm with Elixir harmonizes  with  
 the functional nature of JavaScript.
+* :crystal_ball: Dynamic page updates with news information derived from the [SoTA](https://github.com/rthompsonj/SotAPublicStatsQuery) [Elastic Stack](https://www.elastic.co/products/elasticsearch).
 
 ----
 
