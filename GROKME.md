@@ -27,6 +27,9 @@ Tests
  While I have extensive experience with testing frameworks like RSpec,  
  Minitest, Mocha, or PHPUnit, I am exercising a chance to gain new experience  
  with testing JavaScript applications.  
+  * I also learn JS testing practices from local meetups and hackatons in NYC,
+and contributing to the [Mozilla Firefox Debugger](https://github.com/stratigos/debugger.html)
+ (an open source application in *React*).
 * Facebook's [Jest](https://github.com/facebook/jest)
 * Air BnB's [enzyme](https://github.com/airbnb/enzyme)
 * *TBD...*
