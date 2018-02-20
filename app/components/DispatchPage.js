@@ -3,7 +3,7 @@
  ******************************************************************************/
 
 import React from 'react';
-// import DispatchContainer from '../containers/DispatchContainer';
+import DispatchContainer from '../containers/DispatchContainer';
 import HomepageLink from './HomepageLink';
 
 const DispatchPage = () => {
@@ -15,10 +15,7 @@ const DispatchPage = () => {
       </div>
 
       <div className='dispatch-body'>
-        UNDER CONSTRUCTION - LIVE NEWS UPDATES COMING SOON!
-        {/*
-          <DispatchContainer />
-        */}
+        <DispatchContainer />
       </div>
 
       <HomepageLink />
