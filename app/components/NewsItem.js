@@ -15,13 +15,6 @@ const NewsItem = (props) => {
   );
 };
 
-NewsItem.defaultProps = {
-  newsItem: {
-    id: 0,
-    content: 'Coming soon!'
-  }
-};
-
 NewsItem.propTypes = {
   newsItemId: PropTypes.number,
   newsItem: PropTypes.shape({
