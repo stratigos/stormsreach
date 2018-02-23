@@ -111,7 +111,19 @@ const config = {
     hot: true, // Hot module loading
     noInfo: true,
     inline: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    // Uncomment and use the `public` domain property to get around CORS
+    //  restrictions in various browsers that disallow `localhost` from
+    //  requesting a remote API. It may also be necessary to alias the
+    //  following domain in the system's host config.
+    public: 'dev.stormsreach.com:8080',
+    // Uncomment headers for additional support from the local dev server,
+    //  such as supporting the same CORS policy for other requests to
+    //  `localhost` on a different port.
+    // headers: {
+    //   'Access-Control-Allow-Origin': 'dev.stormsreach.com:8080',
+    //   'Vary': 'Origin'
+    // },
   }
 };
 

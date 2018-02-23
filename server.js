@@ -10,15 +10,22 @@ var app     = express();
 
 // Set HTTP Headers.
 app.use(function(req, res, next) {
+
   // The `Transfer-Encoding: chunked` HTTP header streams the application
   //  content, to avoid potential ~200ms lag from TCP Slow Start.
   res.setHeader('Transfer-Encoding', 'chunked');
+
+  // CORS policy:
+  // res.setHeader('Access-Control-Allow-Origin',  'http://www.shroudoftheavatar.com:9200');
+  // res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+  // res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
 
   next();
 });
 
 // Set base path for application.
 app.use(express.static(__dirname + '/dist/'));
+
 // Set base path to `/data` for fetching application JSON responses.
 app.use('/data', express.static(__dirname + '/app/data/'));
 
