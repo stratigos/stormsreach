@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom';
 // Load data store from Redux.
 import store from './stores/store';
 // Load the Redux Actions which will initialize data store content.
+import fetchNews    from './actions/fetch_news';
 import fetchAvatars from './actions/fetch_avatars';
 import fetchRentals from './actions/fetch_rentals';
 import fetchShops   from './actions/fetch_shops';
@@ -20,6 +21,7 @@ import App from './containers/App';
 import './assets/stylesheets/index.scss';
 
 // Set initial application state.
+store.dispatch(fetchNews());
 store.dispatch(fetchAvatars());
 store.dispatch(fetchRentals());
 store.dispatch(fetchShops());

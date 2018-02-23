@@ -4,7 +4,9 @@
 
 // Application state.
 export const ADD_AVATAR  = 'ADD_AVATAR';
+export const ADD_NEWS    = 'ADD_NEWS';
 export const SET_AVATARS = 'SET_AVATARS';
+export const SET_NEWS    = 'SET_NEWS';
 export const SET_RENTALS = 'SET_RENTALS';
 export const SET_VENDORS = 'SET_VENDORS';
 export const SET_SHOPS   = 'SET_SHOPS';
@@ -15,6 +17,7 @@ export const DISPLAY_ERROR    = 'DISPLAY_ERROR';
 
 // API
 export const FETCH_AVATARS = 'FETCH_AVATARS';
+export const FETCH_NEWS    = 'FETCH_NEWS';
 export const FETCH_RENTALS = 'FETCH_RENTALS';
 export const FETCH_VENDORS = 'FETCH_VENDORS';
 export const FETCH_SHOPS   = 'FETCH_SHOPS';

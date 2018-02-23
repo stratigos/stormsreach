@@ -7,6 +7,7 @@ import reducer from '../reducers'; // reducers/index.js
 // import analyticsMiddleware from '../middlewares/analytics_middleware';
 // import measureMiddleware from '../middlewares/measure_middleware';
 import apiMiddleware from '../middlewares/api_middleware';
+import newsApiMiddleware from '../middlewares/news_api_middleware';
 
 /**
  * Create an array of Middleware instances which can be modified at runtime.
@@ -17,7 +18,8 @@ const middleWares = [
   // debounceMiddleware,
   // errorMiddleware,
   // logMiddleware,
-  apiMiddleware
+  apiMiddleware,
+  newsApiMiddleware
 ];
 
 // // Conditionally modify middleware stack.
