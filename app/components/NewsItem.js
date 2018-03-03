@@ -15,19 +15,12 @@ const NewsItem = (props) => {
   );
 };
 
-NewsItem.defaultProps = {
-  newsItem: {
-    id: '0',
-    content: 'Loading'
-  }
-};
-
 NewsItem.propTypes = {
-  newsItemId: PropTypes.string,
+  newsItemId: PropTypes.string.isRequired,
   newsItem: PropTypes.shape({
-    id: PropTypes.string,
-    content: PropTypes.string
-  })
+    id: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default NewsItem;
