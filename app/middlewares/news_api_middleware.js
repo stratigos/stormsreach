@@ -7,6 +7,7 @@ import { API_EXTERNAL_PROXY, API_ENDPOINT_SOTA_ES_BASE } from '../constants/api_
 import apiError from '../actions/api_error';
 import apiStart from '../actions/api_start';
 import apiDone from '../actions/api_done';
+import formatNewsResponseService from '../services/format_news_response_service';
 
 /**
  * Make call to SoTA Elastic Search server by applying the Action's `query` to
@@ -35,38 +36,15 @@ const newsApiMiddleware = ({ dispatch }) => next => action => {
 
   // Use the FETCH_ACTION `payload.query` to request the latest "news".
   fetch(API_EXTERNAL_PROXY + API_ENDPOINT_SOTA_ES_BASE + payload.query)
-    .then(response => {
-      if (response.status >= 400) {
+    .then(newsResponse => {
+      if (newsResponse.status >= 400) {
         dispatch(apiDone());
-        dispatch(apiError(response.status));
+        dispatch(apiError(newsResponse.status));
       } else {
-        response.json()
-          .then(response  => {
-            /**
-             * TODO - port to formatter module
-             */
-            let newsItems;
-            if (response.hits.total > 0) {
-              newsItems = response.hits.hits.map(hit => {
-                return {
-                  newsItemId: hit._id.trim(),
-                  newsItem: {
-                    id: hit._id.trim(),
-                    content: `${hit._source.Victim} killed by ${hit._source.Killer} on ${hit._source.timestamp}`
-                  }
-                };
-              });
-            } else {
-              newsItems = [{
-                newsItemId: '0',
-                newsItem: {
-                  id: '0',
-                  content: 'No news returned - try again later.'
-                }
-              }];
-            }
+        newsResponse.json()
+          .then(newsResponse  => {
             dispatch(apiDone());
-            dispatch({ type: payload.success, payload: { newsItems } });
+            dispatch({ type: payload.success, payload: { newsItems: formatNewsResponseService(newsResponse) } });
           })
       }
     })
