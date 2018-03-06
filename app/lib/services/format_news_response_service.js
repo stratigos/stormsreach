@@ -13,7 +13,7 @@ const formatNewsResponseService = (newsJson) => {
   );
 };
 
-const formatNewsItem = (newsHit) => {
+export const formatNewsItem = (newsHit) => {
   return {
     newsItemId: newsHit._id.trim(),
     newsItem: {
@@ -23,11 +23,11 @@ const formatNewsItem = (newsHit) => {
   };
 };
 
-const formatNewsItemContent = (source) => {
+export const formatNewsItemContent = (source) => {
   return `${source.Victim} killed by ${source.Killer} on ${source['@timestamp']}`;
 };
 
-const defaultEmptyNews = () => {
+export const defaultEmptyNews = () => {
   return [{
     newsItemId: '0',
     newsItem: {
