@@ -15,4 +15,4 @@ const fetchAvatars = () => ({
   }
 });
 
- export default fetchAvatars;
+export default fetchAvatars;
