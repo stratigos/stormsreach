@@ -1,6 +1,6 @@
-import fetchAvatarsAction from '../../app/actions/fetch_avatars'
+import fetchAvatarsAction from '../../app/actions/fetch_avatars';
 import { API_ENDPOINT_AVATARS } from '../../app/constants/api_endpoints';
-import * as actionTypes from '../../app/constants/action_types'
+import * as actionTypes from '../../app/constants/action_types';
 
 describe('Fetch Avatars ActionCreator', () => {
 

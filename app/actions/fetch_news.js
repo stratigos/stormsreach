@@ -9,4 +9,4 @@ const fetchNews = () => ({
   }
 });
 
- export default fetchNews;
+export default fetchNews;
