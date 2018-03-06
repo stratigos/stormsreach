@@ -7,7 +7,7 @@ import { API_EXTERNAL_PROXY, API_ENDPOINT_SOTA_ES_BASE } from '../constants/api_
 import apiError from '../actions/api_error';
 import apiStart from '../actions/api_start';
 import apiDone from '../actions/api_done';
-import formatNewsResponseService from '../services/format_news_response_service';
+import formatNewsResponseService from '../lib/services/format_news_response_service';
 
 /**
  * Make call to SoTA Elastic Search server by applying the Action's `query` to
