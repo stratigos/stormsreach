@@ -22,6 +22,29 @@ const testSource = {
   zpos: '85.65'
 };
 
+const expectedDefaulEmptyNewsItem = {
+  newsItemId: '0',
+  newsItem: {
+    id: '0',
+    content: 'No news returned - try again later.'
+  }
+};
+
+describe('formatNewsResponseService', () => {
+
+  const emptyNewsJSON = {
+    hits: {
+      total: 0,
+      hits: []
+    }
+  }
+
+  it('returns an array with single default item when no hits are returned', () => {
+    expect(formatNewsResponseService(emptyNewsJSON)).toEqual([expectedDefaulEmptyNewsItem]);
+  });
+
+});
+
 describe('function defaultEmptyNews()', () => {
 
   const assertedDefaultEmptyNewsItems = defaultEmptyNews();
@@ -31,14 +54,6 @@ describe('function defaultEmptyNews()', () => {
   });
 
   describe('array contents', () => {
-
-    const expectedDefaulEmptyNewsItem = {
-      newsItemId: '0',
-      newsItem: {
-        id: '0',
-        content: 'No news returned - try again later.'
-      }
-    };
 
     it('contains just one object', () => {
       expect(assertedDefaultEmptyNewsItems.length).toBe(1);
