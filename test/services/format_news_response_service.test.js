@@ -40,7 +40,8 @@ describe('formatNewsResponseService', () => {
   }
 
   it('returns an array with single default item when no hits are returned', () => {
-    expect(formatNewsResponseService(emptyNewsJSON)).toEqual([expectedDefaulEmptyNewsItem]);
+    const expectedArrayOfEmptyNewsItems = [expectedDefaulEmptyNewsItem];
+    expect(formatNewsResponseService(emptyNewsJSON)).toEqual(expectedArrayOfEmptyNewsItems);
   });
 
   xit('formats Elastic Search response into array of NewsItem structures', () => {
