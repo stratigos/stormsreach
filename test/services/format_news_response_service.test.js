@@ -49,7 +49,82 @@ describe('function formatNewsResponseService()', () => {
       total: 0,
       hits: []
     }
-  }
+  };
+
+  /**
+   * This sample structure of a SoTA Elastic Search response has its property
+   *  naming convention and values maintained to allow for better understanding
+   *  of the response's data.
+   */
+  const testSuccessfulHitsJSON = {
+    "took": 107,
+    "timed_out": false,
+    "_shards": {
+      "total": 159,
+      "successful": 159,
+      "failed": 0
+    },
+    "hits": {
+      "total": 14, // most hits omitted for testing brevity
+      "max_score": 11.974642,
+      "hits": [
+        {
+          "_index": "logstash-2018.03.10",
+          "_type": "logs",
+          "_id": "AWIQkpfI6mCHR0PU114n",
+          "_score": 11.974642,
+          "_source": {
+            "ypos": "37.59",
+            "SceneName": "Novia_R6_City_StormsReach",
+            "PlayerName": "Lord British",
+            "LocationEvent": "MonsterKilledByPlayer",
+            "Killer": "Lord British",
+            "timestamp": "Mar 10 09:30:00",
+            "Victim": "Sheep",
+            "zpos": "114.39",
+            "xpos": "127.12",
+            "@timestamp": "2018-03-10T15:30:00.000Z"
+          }
+        },
+        {
+          "_index": "logstash-2018.03.10",
+          "_type": "logs",
+          "_id": "AWIQkrhs6mCHR0PU118j",
+          "_score": 11.974642,
+          "_source": {
+            "ypos": "38.00",
+            "SceneName": "Novia_R6_City_StormsReach",
+            "PlayerName": "Darkstarr",
+            "LocationEvent": "MonsterKilledByPlayer",
+            "Killer": "Darkstarr",
+            "timestamp": "Mar 10 09:30:00",
+            "Victim": "Chicken",
+            "zpos": "117.22",
+            "xpos": "109.57",
+            "@timestamp": "2018-03-10T15:30:00.000Z"
+          }
+        },
+        {
+          "_index": "logstash-2018.03.10",
+          "_type": "logs",
+          "_id": "AWIQkzeQ6mCHR0PU12MU",
+          "_score": 11.885955,
+          "_source": {
+            "ypos": "37.10",
+            "SceneName": "Novia_R6_City_StormsReach",
+            "PlayerName": "Atos",
+            "LocationEvent": "MonsterKilledByPlayer",
+            "Killer": "Atos",
+            "timestamp": "Mar 10 09:30:00",
+            "Victim": "Duck",
+            "zpos": "100.70",
+            "xpos": "130.28",
+            "@timestamp": "2018-03-10T15:30:00.000Z"
+          }
+        }
+      ]
+    }
+  };
 
   it('returns an array with single default item when no hits are returned', () => {
     const expectedArrayOfEmptyNewsItems = [expectedDefaulEmptyNewsItem];
@@ -57,8 +132,32 @@ describe('function formatNewsResponseService()', () => {
     expect(formatNewsResponseService(emptyNewsJSON)).toEqual(expectedArrayOfEmptyNewsItems);
   });
 
-  xit('formats Elastic Search response into array of NewsItem structures', () => {
-    // do things with computers
+  it('formats Elastic Search response into array of NewsItem structures', () => {
+    const expectedArrayOfNewsItems = [
+      {
+        newsItemId: 'AWIQkpfI6mCHR0PU114n',
+        newsItem: {
+          id: 'AWIQkpfI6mCHR0PU114n',
+          content: 'Sheep killed by Lord British on 2018-03-10T15:30:00.000Z'
+        }
+      },
+      {
+        newsItemId: 'AWIQkrhs6mCHR0PU118j',
+        newsItem: {
+          id: 'AWIQkrhs6mCHR0PU118j',
+          content: 'Chicken killed by Darkstarr on 2018-03-10T15:30:00.000Z'
+        }
+      },
+      {
+        newsItemId: 'AWIQkzeQ6mCHR0PU12MU',
+        newsItem: {
+          id: 'AWIQkzeQ6mCHR0PU12MU',
+          content: 'Duck killed by Atos on 2018-03-10T15:30:00.000Z'
+        }
+      }
+    ];
+
+    expect(formatNewsResponseService(testSuccessfulHitsJSON)).toEqual(expectedArrayOfNewsItems);
   });
 
 });
