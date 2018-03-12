@@ -22,6 +22,18 @@ const testSource = {
   zpos: '85.65'
 };
 
+/**
+ * A "hit" is a member of the Elastic Search nomenclature for query results.
+ */
+const testHitId = '  abc123 ';
+
+const testNewsHit = {
+  _id: testHitId,
+  _source: testSource
+};
+
+const expectedNewsItemContent = `${testSource.Victim} killed by ${testSource.Killer} on ${testSource['@timestamp']}`;
+
 const expectedDefaulEmptyNewsItem = {
   newsItemId: '0',
   newsItem: {
@@ -41,6 +53,7 @@ describe('formatNewsResponseService', () => {
 
   it('returns an array with single default item when no hits are returned', () => {
     const expectedArrayOfEmptyNewsItems = [expectedDefaulEmptyNewsItem];
+
     expect(formatNewsResponseService(emptyNewsJSON)).toEqual(expectedArrayOfEmptyNewsItems);
   });
 
@@ -73,7 +86,6 @@ describe('function defaultEmptyNews()', () => {
 });
 
 describe('function formatNewsItemContent()', () => {
-  const expectedNewsItemContent = `${testSource.Victim} killed by ${testSource.Killer} on ${testSource['@timestamp']}`;
 
   const assertededNewsItemContent = formatNewsItemContent(testSource);
 
@@ -85,18 +97,13 @@ describe('function formatNewsItemContent()', () => {
 
 describe('function formatNewsItem()', () => {
 
-  const testId = '  abc123 ';
-
-  const testNewsHit = {
-    _id: testId,
-    _source: testSource
-  };
+  const expectedHitId = testHitId.trim();
 
   const expectedNewsItem = {
-    newsItemId: 'abc123',
+    newsItemId: expectedHitId,
     newsItem: {
-      id: 'abc123',
-      content: `${testSource.Victim} killed by ${testSource.Killer} on ${testSource['@timestamp']}`
+      id: expectedHitId,
+      content: expectedNewsItemContent
     }
   };
 
@@ -107,8 +114,8 @@ describe('function formatNewsItem()', () => {
   });
 
   it('trims the ID', () => {
-    expect(assertedNewsItem.newsItemId).toBe(testId.trim());
-    expect(assertedNewsItem.newsItem.id).toBe(testId.trim());
+    expect(assertedNewsItem.newsItemId).toBe(expectedHitId);
+    expect(assertedNewsItem.newsItem.id).toBe(expectedHitId);
   });
 
 });
