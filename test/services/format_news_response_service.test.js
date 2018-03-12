@@ -43,6 +43,10 @@ describe('formatNewsResponseService', () => {
     expect(formatNewsResponseService(emptyNewsJSON)).toEqual([expectedDefaulEmptyNewsItem]);
   });
 
+  xit('formats Elastic Search response into array of NewsItem structures', () => {
+    // do things with computers
+  });
+
 });
 
 describe('function defaultEmptyNews()', () => {
