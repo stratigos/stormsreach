@@ -217,4 +217,27 @@ describe('function formatNewsItem()', () => {
     expect(assertedNewsItem.newsItem.id).toBe(expectedHitId);
   });
 
+  /**
+   * Due to the design of the Jest mocking library, and the current design
+   *  (or lack thereof) of the `formatNewsResponseService` utilities, there
+   *  is no concise pattern for mocking the "nested" callbacks. The formatting
+   *  service needs to be redesigned such that the utility callbacks are
+   *  properties of the module, or imported from a seperate file and the
+   *  resulting import mocked here.
+   */
+  xdescribe('callbacks', () => {
+
+    // beforeEach(() => {
+    //   global.formatNewsItemContent = jest.fn();
+    // });
+
+    xit('calls formatNewsItemContent()', () => {
+
+      formatNewsItem(testNewsHit);
+
+      expect(global.formatNewsItemContent).toHaveBeenCalled();
+    });
+
+  });
+
 });
