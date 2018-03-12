@@ -42,7 +42,7 @@ const expectedDefaulEmptyNewsItem = {
   }
 };
 
-describe('formatNewsResponseService', () => {
+describe('function formatNewsResponseService()', () => {
 
   const emptyNewsJSON = {
     hits: {
