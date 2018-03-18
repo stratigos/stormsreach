@@ -34,4 +34,4 @@ export const API_ENDPOINT_SOTA_ES_BASE = 'http://www.shroudoftheavatar.com:9200/
 export const API_SOTA_ES_QUERY_NEWS    = `SceneName:${
   SOTA_ES_SCENE_STORMS_REACH}%20AND%20LocationEvent:${
   SOTA_ES_EVENT_MONSTER_PLAYER}%20AND%20@timestamp:${
-  new Date(Date.now() - (86400000*2)).toISOString().split('T')[0]}`; // yesterday, YYYY-MM-DD
+  new Date(Date.now() - (86400000*2)).toISOString().split('T')[0]}`; // "yesterday", YYYY-MM-DD
