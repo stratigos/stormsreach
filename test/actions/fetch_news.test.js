@@ -4,12 +4,13 @@ import * as actionTypes from '../../app/constants/action_types';
 
 describe('Fetch News ActionCreator', () => {
 
-  it('creates fetching of NewsItems action, with query and success action', () => {
+  it('creates fetch NewsItems action, with query and success action', () => {
+    const expectedNewsQuery = stubNewsQueryUrl();
 
     const expectedAction = {
       type: actionTypes.FETCH_NEWS,
       payload: {
-        query: API_SOTA_ES_QUERY_NEWS,
+        query: expectedNewsQuery,
         success: actionTypes.SET_NEWS
       }
     };
@@ -18,3 +19,15 @@ describe('Fetch News ActionCreator', () => {
   });
 
 });
+
+const stubNewsQueryUrl = () => {
+  const buildNewsQueryServiceMock = jest.fn();
+  buildNewsQueryServiceMock.mockReturnValue(
+    API_SOTA_ES_QUERY_NEWS + (new Date(Date.now() - (86400000*2))
+      .toISOString()
+      .split('T')[0]
+    )
+  );
+
+  return buildNewsQueryServiceMock();
+};
