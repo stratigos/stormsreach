@@ -1,0 +1,43 @@
+/*******************************************************************************
+*                                NEWS PAGE
+*******************************************************************************/
+
+/**
+ * News Page (A.K.A. Dispatch)
+ */
+.dispatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+ * News List
+ */
+.news-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/**
+ * News Items
+ */
+.news-item {
+  max-width: 480px;
+  margin: 10px;
+  padding: 20px 30px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px black, 0 0 10px black;
+  background: rgba(0, 0, 0, 0.2);
+  background-color: $grey-dk;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .news-content {
+
+  }
+}
