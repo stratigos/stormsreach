@@ -52,6 +52,7 @@
     "worker-loader": "^1.1.1"
   },
   "dependencies": {
+    "bourbon": "^5.0.1",
     "deep-freeze": "0.0.1",
     "express": "^4.16.3",
     "prop-types": "^15.6.2",

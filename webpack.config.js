@@ -7,6 +7,7 @@ const appEnv            = process.env.NODE_ENV || 'development';
 const appPath           = path.join(__dirname, 'app');
 const distPath          = path.join(__dirname, 'dist');
 const exclude           = /node_modules/;
+const bourbonPaths      = require('bourbon').includePaths;
 
 const config = {
 
@@ -90,7 +91,9 @@ const config = {
       //  styles).
       {
         test: /\.scss$/,
-        loader: "style-loader!css-loader!sass-loader!autoprefixer-loader?browsers=last 2 versions"
+        loader: "style-loader!css-loader!sass-loader?includePaths[]=" + 
+          bourbonPaths +
+          "!autoprefixer-loader?browsers=last 2 versions"
       }
 
     ],
