@@ -7,7 +7,10 @@ const appEnv            = process.env.NODE_ENV || 'development';
 const appPath           = path.join(__dirname, 'app');
 const distPath          = path.join(__dirname, 'dist');
 const exclude           = /node_modules/;
-const bourbonPaths      = require('bourbon').includePaths;
+
+const bourbonPath       = require('bourbon').includePaths;
+const neatPath          = require("bourbon-neat").includePaths;
+const sassLoaderPaths   = bourbonPath.concat(neatPath);
 
 const config = {
 
@@ -91,11 +94,26 @@ const config = {
       //  styles).
       {
         test: /\.scss$/,
-        loader: "style-loader!css-loader!sass-loader?includePaths[]=" + 
-          bourbonPaths +
-          "!autoprefixer-loader?browsers=last 2 versions"
+        loader: "style-loader"
+      },
+      {
+        test: /\.scss$/,
+        loader: "css-loader"
+      },
+      {
+        test: /\.scss$/,
+        loader: "sass-loader",
+        options: {
+          includePaths: sassLoaderPaths
+        }
+      },
+      {
+        test: /\.scss$/,
+        loader: "autoprefixer-loader",
+        options: {
+          browsers: "last 2 versions"
+        } 
       }
-
     ],
     // https://github.com/niklasvh/html2canvas/issues/749
     noParse: [/html2canvas/]
